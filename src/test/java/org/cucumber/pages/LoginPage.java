@@ -31,8 +31,9 @@ public class LoginPage extends BasicPage {
         passwordTextField.sendKeys(password);
     }
 
-    public void clickLoginButton() {
+    public HomePage clickLoginButton() {
         loginButton.click();
+        return new HomePage(driver);
     }
 
 //    public HomePage loginAs(User user) {

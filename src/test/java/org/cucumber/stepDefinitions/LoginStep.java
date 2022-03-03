@@ -7,6 +7,7 @@ import org.cucumber.framework.Settings;
 import org.cucumber.framework.Utils;
 import org.cucumber.pages.BasicPage;
 import org.cucumber.pages.HeaderPage;
+import org.cucumber.pages.HomePage;
 import org.cucumber.pages.LoginPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertThat;
 
 public class LoginStep {
 
@@ -23,6 +23,7 @@ public class LoginStep {
     LoginPage loginPage;
     HeaderPage headerPage;
     BasicPage basicPage;
+    HomePage homePage;
     Utils utils;
 
 
@@ -35,6 +36,7 @@ public class LoginStep {
         loginPage = new LoginPage(driver);
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
+        homePage = new HomePage(driver);
         utils = new Utils(driver);
     }
 
@@ -48,7 +50,7 @@ public class LoginStep {
         System.out.println("user is on login page");
     }
 
-    @When("^enters (.*) and (.*)$")
+    @When("^user enters username '(.*)' and password '(.*)'$")
     public void entersAdminAndAdmin(String username, String password) {
         System.out.println("user enters username and password");
         if (password == "admin") {
@@ -60,20 +62,22 @@ public class LoginStep {
         }
 
     }
-    @And("clicks on login button")
+
+    @And("user clicks on login button")
     public void clicksOnLoginButton() {
         System.out.println("user clicks on login button");
         loginPage.clickLoginButton();
     }
 
-    @Then("^check valid or invalid login using (.*) and (.*)$")
+    @Then("^check valid login using fName '(.*)' and lName '(.*)'$")
     public void userIsNavigatedToTheHomePage(String fName, String lName) {
+        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName)));
+        System.out.println("user is navigated to the Home page");
+    }
 
-        if (headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName))) {
-            Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName)));
-        } else {
-            Assert.assertTrue(basicPage.getFlashMessage().equals("You have entered an invalid username or password!"));
-            System.out.println("You have entered an invalid username or password!");
-        }
+    @Then("^check invalid login using string '(.*)'$")
+    public void checkInvalidLogin(String string) {
+        Assert.assertTrue(basicPage.getFlashMessage().equals(string));
+        System.out.println("You have entered an invalid username or password!");
     }
 }
