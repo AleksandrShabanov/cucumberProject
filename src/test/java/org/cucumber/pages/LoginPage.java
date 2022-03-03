@@ -52,12 +52,12 @@ public class LoginPage extends BasicPage {
 //    }
 //
 //
-//    public RegistrationPage getRegistrationPage() {
-//        Log4j2Manager.info("===============" + "getRegistrationPage method: Start" + "===============");
-//        registerLink.click();
-//        Log4j2Manager.info("===============" + "getRegistrationPage method: End" + "===============");
-//        return initPage(RegistrationPage.class);
-//    }
+    public RegistrationPage getRegistrationPage() {
+        Log4j2Manager.info("===============" + "getRegistrationPage method: Start" + "===============");
+        registerLink.click();
+        Log4j2Manager.info("===============" + "getRegistrationPage method: End" + "===============");
+        return new RegistrationPage(driver);
+    }
 
     private static final String USER_NAME_TEXT_FIELD_ID = "j_username";
     private static final String USER_PASSWORD_TEXT_FIELD_ID = "j_password";

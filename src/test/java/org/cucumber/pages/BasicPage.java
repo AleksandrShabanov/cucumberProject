@@ -1,5 +1,6 @@
 package org.cucumber.pages;
 
+import org.cucumber.framework.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +34,7 @@ public class BasicPage {
 //    }
 //
     public String getFlashMessage() {
-        if (isElementPresent(flash)) {
+        if (Utils.isElementPresent(flash, driver)) {
             return driver.findElement(flash).getText();
         }
         return null;

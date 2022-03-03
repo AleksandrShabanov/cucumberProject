@@ -24,7 +24,6 @@ public class LoginStep {
     HeaderPage headerPage;
     BasicPage basicPage;
     HomePage homePage;
-    Utils utils;
 
 
     @Before
@@ -37,7 +36,6 @@ public class LoginStep {
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
         homePage = new HomePage(driver);
-        utils = new Utils(driver);
     }
 
     @After
@@ -53,14 +51,9 @@ public class LoginStep {
     @When("^user enters username '(.*)' and password '(.*)'$")
     public void entersAdminAndAdmin(String username, String password) {
         System.out.println("user enters username and password");
-        if (password == "admin") {
-            loginPage.enterLogin(username);
-            loginPage.enterPassword(password);
-        } else {
-            loginPage.enterLogin(username);
-            loginPage.enterPassword(password);
-        }
 
+        loginPage.enterLogin(username);
+        loginPage.enterPassword(password);
     }
 
     @And("user clicks on login button")

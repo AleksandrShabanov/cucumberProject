@@ -12,7 +12,4 @@ Feature: feature to test login functionality
     And user clicks on login button
     Then check invalid login using string 'You have entered an invalid username or password!'
 
-  Scenario: Login as a valid user. Open a new browser tab and logout. Switch to the first tab and click on any link. User should be logged out automatically.
-    Given user is on login page
-    When user enters username 'admin' and password 'admin'
 
