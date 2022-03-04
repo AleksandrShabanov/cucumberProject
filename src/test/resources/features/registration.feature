@@ -1,8 +1,5 @@
 Feature: feature to test registration functionality
 
-  Background:
-
-
   Scenario: Register a new user, and verify that the user is logged in
     Given we create user
       | username        | killerFrog |
