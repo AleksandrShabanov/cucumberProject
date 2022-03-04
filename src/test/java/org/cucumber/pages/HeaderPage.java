@@ -33,17 +33,17 @@ public class HeaderPage extends BasicPage {
     public String getWelcomeUserName(String fName, String lName) {
         return "Welcome " + fName + " " + lName;
     }
-//
-//    public WebElement getMyAppLink() {
-//        return myAppLink;
-//    }
-//
-//    public MyAppPage getMyAppPage() {
-//        Log4j2Manager.info("===============" + "getMyAppPage method: Start" + "===============");
-//        myAppLink.click();
-//        Log4j2Manager.info("===============" + "getMyAppPage method: End" + "===============");
-//        return initPage(MyAppPage.class);
-//    }
+
+    public WebElement getMyAppLink() {
+        return myAppLink;
+    }
+
+    public MyAppPage getMyAppPage() {
+        Log4j2Manager.info("===============" + "getMyAppPage method: Start" + "===============");
+        myAppLink.click();
+        Log4j2Manager.info("===============" + "getMyAppPage method: End" + "===============");
+        return new MyAppPage(driver);
+    }
 //
 //    public AjaxPage getAjaxPage() {
 //        Log4j2Manager.info("===============" + "getAjaxPage method: Start" + "===============");

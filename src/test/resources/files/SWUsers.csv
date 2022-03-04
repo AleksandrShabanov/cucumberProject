@@ -1,0 +1,6 @@
+﻿name;fName;lName;password;confirmPassword;role
+Vader;Darth;Vader;DeathStar;DeathStar;DEVELOPER
+Chubaka;Chubaka;Chubaka;Chubaka;Chubaka;USER
+Princess;Leya;Skywalker;R2D2;R2D2;DEVELOPER
+Robot;C3PO;C3PO;1/=qw23;1/=qw23;USER
+Jedi;Luke;Skywalker;power;power;DEVELOPER

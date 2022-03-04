@@ -14,7 +14,7 @@ public class Utils {
         new WebDriverWait(driver, 7).until(ExpectedConditions.visibilityOf(webElement));
     }
 
-    public static boolean isElementPresent(String xpath) {
+    public static boolean isElementPresent(String xpath, WebDriver driver) {
         return driver.findElements(By.xpath(xpath)).size() > 0;
     }
 

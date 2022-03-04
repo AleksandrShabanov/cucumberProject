@@ -4,6 +4,7 @@ import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 
@@ -22,9 +23,20 @@ public class NewAppPage extends BasicPage {
     @FindBy(xpath = ADD_ICON_BUTTON_XPATH)
     private WebElement addIconButton;
     private File file = new File("src/test/resources/XwingHeroHome-SW.jpg");
+    WebDriver driver;
+
+    public WebElement getTitleName() {
+        return titleName;
+    }
+
+    public NewAppPage (WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
 //    public void assertTitle() {
-//        assertThat(titleName.equals("New application"));
+//        (titleName.equals("New application"));
 //    }
 
 //    public HomePage createNewApp() {
@@ -54,7 +66,4 @@ public class NewAppPage extends BasicPage {
     private static final String ADD_IMAGE_BUTTON_XPATH = "//input[@name='image']";
     private static final String ADD_ICON_BUTTON_XPATH = "//input[@name='icon']";
 
-    public NewAppPage(WebDriver driver) {
-        super(driver);
-    }
 }

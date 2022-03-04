@@ -46,7 +46,7 @@ public class RegistrationPage extends BasicPage {
 
     public HomePage clickOnRegister() {
         Log4j2Manager.info("===============" + "clickOnRegister method: Start" + "===============");
-        Utils.waitForElementVisible(register);
+//        Utils.waitForElementVisible(register);
         register.click();
         Log4j2Manager.info("===============" + "clickOnRegister method: End" + "===============");
         return new HomePage(driver);

@@ -1,6 +1,10 @@
 package org.cucumber.models;
 
 
+import io.cucumber.datatable.DataTable;
+
+import java.util.Map;
+
 public class User {
     private String username;
     private String password;
@@ -63,5 +67,45 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public User createUser(DataTable dataTable, User user) {
+        Map<String, String> map = dataTable.asMap();
+
+        for (Map.Entry entry : map.entrySet()) {
+            switch ((String) entry.getKey()) {
+                case "username":
+                    user.setUsername((String) entry.getValue());
+                    break;
+                case "fName":
+                    user.setFname((String) entry.getValue());
+                    break;
+                case "lName":
+                    user.setLname((String) entry.getValue());
+                    break;
+                case "password":
+                    user.setPassword((String) entry.getValue());
+                    break;
+                case "confirmPassword":
+                    user.setConfirmPassword((String) entry.getValue());
+                    break;
+                case "role":
+                    user.setRole((String) entry.getValue());
+                    break;
+            }
+        }
+        return user;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                ", role='" + role + '\'' +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                '}';
     }
 }

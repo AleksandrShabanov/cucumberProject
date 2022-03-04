@@ -18,7 +18,7 @@ public class UserBuilder {
         return user;
     }
 
-    public static User createValidateUser(String name, String fName, String lName, String password, String confirmPassword, String role) {
+    public static User createUser(String name, String fName, String lName, String password, String confirmPassword, String role) {
         User user = new User();
         user.setUsername(name);
         user.setFname(fName);
