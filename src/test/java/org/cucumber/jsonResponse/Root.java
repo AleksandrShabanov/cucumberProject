@@ -1,7 +1,5 @@
 package org.cucumber.jsonResponse;
-
-import io.cucumber.messages.internal.com.fasterxml.jackson.annotation.JsonIgnore;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Objects;
 
 public class Root {

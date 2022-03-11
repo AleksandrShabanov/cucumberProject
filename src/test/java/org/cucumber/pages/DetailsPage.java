@@ -1,7 +1,8 @@
 package org.cucumber.pages;
 
-import io.cucumber.messages.internal.com.fasterxml.jackson.core.JsonProcessingException;
-import io.cucumber.messages.internal.com.fasterxml.jackson.databind.ObjectMapper;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.jsonResponse.Root;
 import org.openqa.selenium.Alert;
