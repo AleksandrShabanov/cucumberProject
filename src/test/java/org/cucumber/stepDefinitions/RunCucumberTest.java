@@ -9,6 +9,7 @@ import static io.cucumber.core.options.Constants.PLUGIN_PROPERTY_NAME;
 
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = {"org/cucumber/stepDefinitions"})
+@CucumberOptions(features = "src/test/resources/features", glue = {"org/cucumber/stepDefinitions"},
+        plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 public class RunCucumberTest {
 }
