@@ -32,11 +32,11 @@ public class RegistrationStep {
     public void setUp() {
         driver = settings.getDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.navigate().to(settings.getUrl());
-        loginPage = new LoginPage(driver);
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
+        loginPage = basicPage.forceLogout(driver);
         homePage = new HomePage(driver);
         registrationPage = new RegistrationPage(driver);
         myAppPage = new MyAppPage(driver);
@@ -80,7 +80,7 @@ public class RegistrationStep {
 
     @When("user logout")
     public void userLogout() {
-        basicPage.forceLogout();
+        basicPage.forceLogout(driver);
         System.out.println("user logout");
     }
 

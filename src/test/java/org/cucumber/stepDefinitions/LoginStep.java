@@ -15,9 +15,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class LoginStep {
-
     WebDriver driver = null;
     Settings settings = new Settings();
     LoginPage loginPage;
@@ -30,11 +28,11 @@ public class LoginStep {
     public void setUp() {
         driver = settings.getDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.navigate().to(settings.getUrl());
-        loginPage = new LoginPage(driver);
-        headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
+        loginPage = basicPage.forceLogout(driver);
+        headerPage = new HeaderPage(driver);
         homePage = new HomePage(driver);
     }
 
@@ -43,12 +41,7 @@ public class LoginStep {
         driver.quit();
     }
 
-    @Given("user is on login page")
-    public void userIsOnLoginPage() {
-        System.out.println("user is on login page");
-    }
-
-    @When("^user enters username '(.*)' and password '(.*)'$")
+    @Given("^user enters username '(.*)' and password '(.*)'$")
     public void entersAdminAndAdmin(String username, String password) {
         System.out.println("user enters username and password");
 
@@ -56,7 +49,7 @@ public class LoginStep {
         loginPage.enterPassword(password);
     }
 
-    @And("user clicks on login button")
+    @When("user clicks on login button")
     public void clicksOnLoginButton() {
         System.out.println("user clicks on login button");
         loginPage.clickLoginButton();

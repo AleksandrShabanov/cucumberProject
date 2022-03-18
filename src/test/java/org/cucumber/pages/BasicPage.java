@@ -27,7 +27,7 @@ public class BasicPage {
 
     }
 
-        public LoginPage forceLogout() {
+        public LoginPage forceLogout(WebDriver driver) {
         driver.get(settings.getUrl());
         if (isElementPresent(logoutBy, driver)) {
             driver.findElement(logoutBy).click();

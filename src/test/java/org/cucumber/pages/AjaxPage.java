@@ -5,6 +5,8 @@ import org.cucumber.framework.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -37,13 +39,46 @@ public class AjaxPage extends BasicPage {
         return incorrectResultField;
     }
 
-    public boolean isSumCorrect(String x, String y) {
-        Log4j2Manager.info("===============" + "sumTwoNumbers method: Start" + "===============");
+//    public boolean isSumCorrect(String x, String y) {
+//        Log4j2Manager.info("===============" + "sumTwoNumbers method: Start" + "===============");
+//        xTextField.sendKeys(x);
+//        yTextField.sendKeys(y);
+//        sumButton.click();
+//
+//        Utils.waitForElementVisible(correctResultField);
+//        String string = correctResultField.getText();
+//        String regexString = "\\d+(\\.\\d+)?";
+//        Double sumDouble = 0.0;
+//        Pattern pattern = Pattern.compile(regexString);
+//        Matcher matcher = pattern.matcher(string);
+//        double xField = Double.valueOf(x);
+//        double yField = Double.valueOf(y);
+//
+//        while (matcher.find()) {
+//            sumDouble = Double.valueOf(matcher.group());
+//            if (sumDouble == (xField + yField)) {
+//                System.out.println(xField + " + " + yField + " = " + sumDouble);
+//                return true;
+//            } else {
+//                System.out.println("the sum of the numbers is not correct");
+//            }
+//        }
+//        Log4j2Manager.info("===============" + "sumTwoNumbers method: End" + "===============");
+//        return false;
+//    }
+
+    public void enterData(String x, String y) {
         xTextField.sendKeys(x);
         yTextField.sendKeys(y);
-        sumButton.click();
+    }
 
-        Utils.waitForElementVisible(correctResultField);
+    public void clickSum(){
+        sumButton.click();
+    }
+
+    public boolean isSumCorrect(String x, String y) {
+        new WebDriverWait(settings.getDriver(), 3).until(ExpectedConditions.visibilityOf(correctResultField));
+//        Utils.waitForElementVisible(correctResultField);
         String string = correctResultField.getText();
         String regexString = "\\d+(\\.\\d+)?";
         Double sumDouble = 0.0;

@@ -1,0 +1,1 @@
+{"uuid":"9506b82d-2f0e-40e9-ae37-1f71c21b78cd","name":"Scenario: Enter one valid number and one string (not a number), click ‘Sum’, wait for the result, and verify that the message ‘Incorrect data’ appears","children":["dc353deb-10d4-4672-930b-311002c65d6d"],"befores":[],"afters":[],"start":1647610470528,"stop":1647610470528}

@@ -44,13 +44,13 @@ public class HeaderPage extends BasicPage {
         Log4j2Manager.info("===============" + "getMyAppPage method: End" + "===============");
         return new MyAppPage(driver);
     }
-//
-//    public AjaxPage getAjaxPage() {
-//        Log4j2Manager.info("===============" + "getAjaxPage method: Start" + "===============");
-//        ajaxLink.click();
-//        Log4j2Manager.info("===============" + "getAjaxPage method: End" + "===============");
-//        return initPage(AjaxPage.class);
-//    }
+
+    public AjaxPage getAjaxPage() {
+        Log4j2Manager.info("===============" + "getAjaxPage method: Start" + "===============");
+        ajaxLink.click();
+        Log4j2Manager.info("===============" + "getAjaxPage method: End" + "===============");
+        return new AjaxPage(driver);
+    }
 //
 //    public JsPage getJsPage() {
 //        Log4j2Manager.info("===============" + "getJsPage method: Start" + "===============");
