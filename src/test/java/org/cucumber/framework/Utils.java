@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utils {
 
-    private static WebDriver driver;
+    private static Settings settings = new Settings();
 
     public static void waitForElementVisible(WebElement webElement) {
-        new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOf(webElement));
+        new WebDriverWait(settings.getDriver(), 4).until(ExpectedConditions.visibilityOf(webElement));
     }
 
     public static boolean isElementPresent(String xpath, WebDriver driver) {
@@ -23,7 +23,7 @@ public class Utils {
     }
 
     public static String getText(String xpath) {
-        return driver.findElement(By.xpath(xpath)).getText();
+        return settings.getDriver().findElement(By.xpath(xpath)).getText();
     }
 
 }

@@ -1,12 +1,10 @@
 package org.cucumber.pages;
 
 import org.cucumber.framework.Log4j2Manager;
+import org.cucumber.framework.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,7 +26,7 @@ public class AjaxPage extends BasicPage {
     }
 
     public String getIncorrectResultField() {
-        new WebDriverWait(settings.getDriver(), 5).until(ExpectedConditions.visibilityOf(incorrectResultField));
+        Utils.waitForElementVisible(incorrectResultField);
         return incorrectResultField.getText();
     }
 
@@ -42,8 +40,7 @@ public class AjaxPage extends BasicPage {
     }
 
     public boolean isSumCorrect(String x, String y) {
-        new WebDriverWait(settings.getDriver(), 3).until(ExpectedConditions.visibilityOf(correctResultField));
-//        Utils.waitForElementVisible(correctResultField);
+        Utils.waitForElementVisible(correctResultField);
         String string = correctResultField.getText();
         String regexString = "\\d+(\\.\\d+)?";
         Double sumDouble = 0.0;
