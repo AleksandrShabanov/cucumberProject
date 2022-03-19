@@ -63,4 +63,9 @@ public class AjaxStep {
     public void check_if_the_result_is_correct_if_x_and_y(String x, String y) {
         Assert.assertTrue(ajaxPage.isSumCorrect(x, y));
     }
+
+    @Then("check if the result is incorrect if X {string} and Y {string}")
+    public void checkIfResultIsIncorrect(String x, String y) {
+
+    }
 }
