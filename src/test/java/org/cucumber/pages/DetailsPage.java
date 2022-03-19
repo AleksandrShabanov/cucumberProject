@@ -46,8 +46,10 @@ public class DetailsPage extends BasicPage {
     private String authorOfApp;
     private int numberOfDownloadsOfApp;
 
-    public DetailsPage() {
-        super();
+    WebDriver driver;
+
+    public DetailsPage(WebDriver driver) {
+        super(driver);
     }
 
     public WebElement getJsonResponse() {
@@ -68,7 +70,7 @@ public class DetailsPage extends BasicPage {
         Log4j2Manager.info("===============" + "getJson method: Start" + "===============");
         ObjectMapper objectMapper = new ObjectMapper();
         Root root = null;
-        DetailsPage detailsPage = new DetailsPage();
+        DetailsPage detailsPage = new DetailsPage(driver);
 
         try {
             root = objectMapper.readValue(jsonResponse.getText(), Root.class);
@@ -88,7 +90,7 @@ public class DetailsPage extends BasicPage {
 
     public DetailsPage getDetailsPageInfo() {
         Log4j2Manager.info("===============" + "getDetailsPageInfo method: Start" + "===============");
-        DetailsPage detailsPage = new DetailsPage();
+        DetailsPage detailsPage = new DetailsPage(driver);
         detailsPage.titleOfApp = titleText.getText();
         detailsPage.descriptionOfApp = descriptionText.getText();
         detailsPage.categoryOfApp = categoryText.getText();

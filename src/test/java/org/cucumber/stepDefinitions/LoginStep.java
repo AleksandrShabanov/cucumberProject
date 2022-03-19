@@ -1,10 +1,7 @@
 package org.cucumber.stepDefinitions;
 
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.cucumber.framework.Settings;
-import org.cucumber.framework.Utils;
 import org.cucumber.pages.BasicPage;
 import org.cucumber.pages.HeaderPage;
 import org.cucumber.pages.HomePage;
@@ -12,34 +9,22 @@ import org.cucumber.pages.LoginPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-
-import java.util.concurrent.TimeUnit;
-
 public class LoginStep {
-    WebDriver driver = null;
-    Settings settings = new Settings();
+    WebDriver driver;
     LoginPage loginPage;
     HeaderPage headerPage;
     BasicPage basicPage;
     HomePage homePage;
 
-
     @Before
     public void setUp() {
-        driver = settings.getDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        driver.navigate().to(settings.getUrl());
+        driver = Hooks.getDriver();
         basicPage = new BasicPage(driver);
         loginPage = basicPage.forceLogout(driver);
         headerPage = new HeaderPage(driver);
         homePage = new HomePage(driver);
     }
 
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
 
     @Given("^user enters username '(.*)' and password '(.*)'$")
     public void entersAdminAndAdmin(String username, String password) {

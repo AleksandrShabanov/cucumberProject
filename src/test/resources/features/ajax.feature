@@ -14,4 +14,4 @@ Feature: feature to test ajax functionality
     When user at Home Page clicks on ajax test page link
     And user at Ajax Page enters X '2' and Y 'two'
     And user clicks on Sum button
-    Then check if the result is incorrect if X '2' and Y 'two'
+    Then check if the result is incorrect. Incorrect result field equals 'Result is: Incorrect data'

@@ -23,9 +23,6 @@ public class BasicPage {
         PageFactory.initElements(driver, this);
     }
 
-    public BasicPage() {
-
-    }
 
         public LoginPage forceLogout(WebDriver driver) {
         driver.get(settings.getUrl());

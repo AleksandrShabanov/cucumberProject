@@ -1,23 +1,16 @@
 package org.cucumber.stepDefinitions;
 
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.cucumber.framework.DataProvider;
-import org.cucumber.framework.Settings;
 import org.cucumber.models.User;
 import org.cucumber.pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.datatable.DataTable;
 
-import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
-
 public class RegistrationStep {
 
-    WebDriver driver = null;
-    Settings settings = new Settings();
+    WebDriver driver;
     User user = new User();
     LoginPage loginPage;
     HeaderPage headerPage;
@@ -30,10 +23,11 @@ public class RegistrationStep {
 
     @Before
     public void setUp() {
-        driver = settings.getDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        driver.navigate().to(settings.getUrl());
+//        driver = settings.getDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//        driver.navigate().to(settings.getUrl());
+        driver = Hooks.getDriver();
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
         loginPage = basicPage.forceLogout(driver);
@@ -43,10 +37,10 @@ public class RegistrationStep {
         newAppPage = new NewAppPage(driver);
     }
 
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+//    @After
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
     @Given("^we create user$")
     public void createUser(DataTable dataTable) {

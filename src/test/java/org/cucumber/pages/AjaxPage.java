@@ -1,7 +1,6 @@
 package org.cucumber.pages;
 
 import org.cucumber.framework.Log4j2Manager;
-import org.cucumber.framework.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,44 +27,10 @@ public class AjaxPage extends BasicPage {
         super(driver);
     }
 
-    public WebElement getIncorrectResultField(String x, String y) {
-        Log4j2Manager.info("===============" + "getIncorrectResultField method: Start" + "===============");
-        xTextField.sendKeys(x);
-        yTextField.sendKeys(y);
-        sumButton.click();
-        Log4j2Manager.info("===============" + "getIncorrectResultField method: End" + "===============");
-        Utils.waitForElementVisible(incorrectResultField);
-        System.out.println(incorrectResultField.getText());
-        return incorrectResultField;
+    public String getIncorrectResultField() {
+        new WebDriverWait(settings.getDriver(), 5).until(ExpectedConditions.visibilityOf(incorrectResultField));
+        return incorrectResultField.getText();
     }
-
-//    public boolean isSumCorrect(String x, String y) {
-//        Log4j2Manager.info("===============" + "sumTwoNumbers method: Start" + "===============");
-//        xTextField.sendKeys(x);
-//        yTextField.sendKeys(y);
-//        sumButton.click();
-//
-//        Utils.waitForElementVisible(correctResultField);
-//        String string = correctResultField.getText();
-//        String regexString = "\\d+(\\.\\d+)?";
-//        Double sumDouble = 0.0;
-//        Pattern pattern = Pattern.compile(regexString);
-//        Matcher matcher = pattern.matcher(string);
-//        double xField = Double.valueOf(x);
-//        double yField = Double.valueOf(y);
-//
-//        while (matcher.find()) {
-//            sumDouble = Double.valueOf(matcher.group());
-//            if (sumDouble == (xField + yField)) {
-//                System.out.println(xField + " + " + yField + " = " + sumDouble);
-//                return true;
-//            } else {
-//                System.out.println("the sum of the numbers is not correct");
-//            }
-//        }
-//        Log4j2Manager.info("===============" + "sumTwoNumbers method: End" + "===============");
-//        return false;
-//    }
 
     public void enterData(String x, String y) {
         xTextField.sendKeys(x);

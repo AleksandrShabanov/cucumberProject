@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AjaxStep {
 
-    WebDriver driver = null;
+    WebDriver driver;
     Settings settings = new Settings();
     LoginPage loginPage;
     HeaderPage headerPage;
@@ -20,22 +20,14 @@ public class AjaxStep {
     HomePage homePage;
     AjaxPage ajaxPage;
 
-    @Before
+    @Before()
     public void setUp() {
-        driver = settings.getDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        driver.navigate().to(settings.getUrl());
+        driver = Hooks.getDriver();
         basicPage = new BasicPage(driver);
         loginPage = basicPage.forceLogout(driver);
         headerPage = new HeaderPage(driver);
         homePage = new HomePage(driver);
         ajaxPage = new AjaxPage(driver);
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
     }
 
     @Given("the user enters username {string} and password {string}")
@@ -64,8 +56,8 @@ public class AjaxStep {
         Assert.assertTrue(ajaxPage.isSumCorrect(x, y));
     }
 
-    @Then("check if the result is incorrect if X {string} and Y {string}")
-    public void checkIfResultIsIncorrect(String x, String y) {
-
+    @Then("check if the result is incorrect. Incorrect result field equals {string}")
+    public void checkIfResultIsIncorrect(String incorrectFiled) {
+        Assert.assertEquals(ajaxPage.getIncorrectResultField(), incorrectFiled);
     }
 }
