@@ -51,13 +51,13 @@ public class HeaderPage extends BasicPage {
         Log4j2Manager.info("===============" + "getAjaxPage method: End" + "===============");
         return new AjaxPage(driver);
     }
-//
-//    public JsPage getJsPage() {
-//        Log4j2Manager.info("===============" + "getJsPage method: Start" + "===============");
-//        jsLink.click();
-//        Log4j2Manager.info("===============" + "getJsPage method: End" + "===============");
-//        return initPage(JsPage.class);
-//    }
+
+    public JsPage getJsPage() {
+        Log4j2Manager.info("===============" + "getJsPage method: Start" + "===============");
+        jsLink.click();
+        Log4j2Manager.info("===============" + "getJsPage method: End" + "===============");
+        return new JsPage(driver);
+    }
 
     private static final String MY_APP_LINK = "My applications";
     private static final String AJAX_LINK = "Ajax test page";

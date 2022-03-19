@@ -1,7 +1,6 @@
 package org.cucumber.stepDefinitions;
 
 import io.cucumber.java.*;
-import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.framework.Settings;
 
 import org.openqa.selenium.WebDriver;
@@ -19,7 +18,6 @@ public class Hooks {
 
     @Before(order = 10)
     public static void openBrowser() {
-        Log4j2Manager.info("<<<<<<Opening browser>>>>>");
         driver = settings.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
