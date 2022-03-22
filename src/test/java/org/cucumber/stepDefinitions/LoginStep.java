@@ -34,10 +34,10 @@ public class LoginStep {
         loginPage.enterPassword(password);
     }
 
-    @When("user clicks on login button")
-    public void clicksOnLoginButton() {
+    @When("user clicks on {string} button")
+    public void clicksOnLoginButton(String button) {
         System.out.println("user clicks on login button");
-        loginPage.clickLoginButton();
+        loginPage.clickLoginButton(button);
     }
 
     @Then("^check valid login using fName '(.*)' and lName '(.*)'$")

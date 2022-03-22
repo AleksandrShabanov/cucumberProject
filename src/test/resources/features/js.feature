@@ -8,4 +8,4 @@ Feature: feature to test js functionality
     And click on login button
     When user at Home Page clicks on 'JS test page'
     Then enter coordinates
-    And check is Alert displayed
+    And check is 'Whoo Hoooo! Correct!' displayed

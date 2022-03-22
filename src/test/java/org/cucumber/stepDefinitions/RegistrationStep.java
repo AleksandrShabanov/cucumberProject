@@ -48,9 +48,9 @@ public class RegistrationStep {
         System.out.println(user);
     }
 
-    @And("user is on login page clicks on register link")
-    public void userClicksOnRegisterLink() {
-        loginPage.getRegistrationPage();
+    @And("user is on login page clicks on {string} link")
+    public void userClicksOnRegisterLink(String registerLink) {
+        loginPage.getRegistrationPage(registerLink);
         System.out.println("user clicks on register link");
     }
 

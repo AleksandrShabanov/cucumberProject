@@ -32,14 +32,14 @@ public class JsPage extends BasicPage {
         Log4j2Manager.info("===============" + "enterCoordinates method: End" + "===============");
     }
 
-    public void isAlertDisplayed(JavascriptExecutor js) {
+    public void isAlertDisplayed(JavascriptExecutor js, String alert) {
         Log4j2Manager.info("===============" + "isAlertDisplayed method: Start" + "===============");
         js.executeScript("process();");
         try {
             WebDriverWait wait = new WebDriverWait(settings.getDriver(), 2);
             wait.until(ExpectedConditions.alertIsPresent());
             message = settings.getDriver().switchTo().alert();
-            if (message.getText().equals("Whoo Hoooo! Correct!")) {
+            if (message.getText().equals(alert)) {
                 message.accept();
                 System.out.println(message.getText());
             }

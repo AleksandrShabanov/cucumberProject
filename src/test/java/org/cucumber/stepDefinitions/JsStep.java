@@ -48,9 +48,9 @@ public class JsStep {
         jsPage.enterCoordinates((JavascriptExecutor)driver);
     }
 
-    @And("check is Alert displayed")
-    public void checkIsAlertDisplayed() {
+    @And("check is {string} displayed")
+    public void checkIsAlertDisplayed(String alert) {
         System.out.println("check is Alert displayed");
-        jsPage.isAlertDisplayed((JavascriptExecutor)driver);
+        jsPage.isAlertDisplayed((JavascriptExecutor)driver, alert);
     }
 }
