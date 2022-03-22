@@ -101,16 +101,16 @@ public class DetailsPage extends BasicPage {
         return detailsPage;
     }
 
-//    public DetailsPage downloadFile() {
-//        Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
-//        try {
-//            downloadButton.click();
-//        } catch (Exception e) {
-//            e.getStackTrace();
-//        }
-//        Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
-//        return initPage(DetailsPage.class);
-//    }
+    public DetailsPage downloadFile() {
+        Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
+        try {
+            downloadButton.click();
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+        Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
+        return new DetailsPage(driver);
+    }
 //
 //    public void deleteFile() {
 //        Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");

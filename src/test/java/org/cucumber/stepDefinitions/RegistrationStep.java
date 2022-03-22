@@ -84,13 +84,14 @@ public class RegistrationStep {
 //        System.out.println("user is navigated to the Home page");
 //    }
 
-    @Then("click on {string} and verify upload {string}")
-    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myApp, String newApp) {
-        headerPage.getMyAppPage(myApp);
-        myAppPage.getNewAppPage();
-        Assert.assertTrue(newAppPage.getTitleName().getText().equals(newApp));
+    @Then("click on {string} and {string} and verify upload {string}")
+    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myAppLink, String newAppLink, String string) {
+        headerPage.getMyAppPage(myAppLink);
+        myAppPage.getNewAppPage(newAppLink);
+        Assert.assertTrue(newAppPage.getTitleName().getText().equals(string));
         System.out.println("verify that the developer can open the page to upload");
     }
+
 
     @Then("verify that the user can see the app but cannot upload them")
     public void verifyThatTheUserCanSeeTheAppButCannotUploadThem() {

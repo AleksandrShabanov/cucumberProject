@@ -1,12 +1,16 @@
+C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\AjaxStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\Utils.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\RegistrationStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\BrowserType.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\RegistrationPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\DataProvider.java
+C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\Hooks.java
+C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\JsStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\JsPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\Log4j2Manager.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\Settings.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\MyAppPage.java
+C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\LocatorsEnum.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\UnknownPropertyException.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\DetailsPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\HeaderPage.java
@@ -18,7 +22,6 @@ C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\models\User.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\LoginStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\HomePage.java
-C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\StepDefs.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\BasicPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse\Root.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\models\UserBuilder.java

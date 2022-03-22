@@ -4,6 +4,7 @@ import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasicPage {
 
@@ -17,15 +18,17 @@ public class HomePage extends BasicPage {
     private WebElement newAppElement;
     @FindBy(xpath = NEW_APP_ELEMENT_WITH_IMAGE_XPATH)
     private WebElement newAppWithImage;
+    WebDriver driver;
 
     public HomePage(WebDriver driver) {
         super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public WebElement getNewAppElement() {
         return newAppElement;
     }
-
     public WebElement getNewAppWithImage() {
         return newAppWithImage;
     }
@@ -41,12 +44,12 @@ public class HomePage extends BasicPage {
 //        return myAppPopular;
 //    }
 //
-//    public DetailsPage getDetailsPage() {
-//        Log4j2Manager.info("===============" + "getDetailsPage method: Start" + "===============");
-//        detailsLink.click();
-//        Log4j2Manager.info("===============" + "getDetailsPage method: End" + "===============");
-//        return initPage(DetailsPage.class);
-//    }
+    public DetailsPage getDetailsPage() {
+        Log4j2Manager.info("===============" + "getDetailsPage method: Start" + "===============");
+        detailsLink.click();
+        Log4j2Manager.info("===============" + "getDetailsPage method: End" + "===============");
+        return new DetailsPage(driver);
+    }
 //
 //    public DetailsPage getNewAppDetailsPage() {
 //        Log4j2Manager.info("===============" + "getNewAppDetailsPage method: Start" + "===============");

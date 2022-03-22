@@ -1,6 +1,8 @@
 package org.cucumber.pages;
 
+import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Log4j2Manager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +18,6 @@ public class NewAppPage extends BasicPage {
     private WebElement titleTextField;
     @FindBy(xpath = TEXT_AREA_XPATH)
     private WebElement textAreaDescription;
-    @FindBy(xpath = CREATE_BUTTON_XPATH)
     private WebElement createButton;
     @FindBy(xpath = ADD_IMAGE_BUTTON_XPATH)
     private WebElement addImageButton;
@@ -39,14 +40,18 @@ public class NewAppPage extends BasicPage {
 //        (titleName.equals("New application"));
 //    }
 
-//    public HomePage createNewApp() {
-//        Log4j2Manager.info("===============" + "createNewApp method: Start" + "===============");
-//        titleTextField.sendKeys("newAppAVS123");
-//        textAreaDescription.sendKeys("This is a new application");
-//        createButton.click();
-//        Log4j2Manager.info("===============" + "createNewApp method: End" + "===============");
-//        return initPage(HomePage.class);
-//    }
+    public void createNewApp(String name, String descr) {
+        Log4j2Manager.info("===============" + "createNewApp method: Start" + "===============");
+        titleTextField.sendKeys(name);
+        textAreaDescription.sendKeys(descr);
+        Log4j2Manager.info("===============" + "createNewApp method: End" + "===============");
+    }
+
+    public HomePage clickCreateButton(String button) {
+        createButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
+        createButton.click();
+        return new HomePage(driver);
+    }
 
 //    public MyAppPage createNewAppWithImage() {
 //        Log4j2Manager.info("===============" + "createNewAppWithImage method: Start" + "===============");
@@ -62,7 +67,7 @@ public class NewAppPage extends BasicPage {
     private static final String TITLE_NAME_TAG_NAME = "h1";
     private static final String TITLE_TEXT_FIELD_XPATH = "//input[@name='title']";
     private static final String TEXT_AREA_XPATH = "//textarea[@name='description']";
-    private static final String CREATE_BUTTON_XPATH = "//input[@type='submit']";
+//    private static final String CREATE_BUTTON_XPATH = "//input[@type='submit']";
     private static final String ADD_IMAGE_BUTTON_XPATH = "//input[@name='image']";
     private static final String ADD_ICON_BUTTON_XPATH = "//input[@name='icon']";
 
