@@ -1,8 +1,10 @@
 package org.cucumber.pages;
 
+import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.framework.Utils;
 import org.cucumber.models.User;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,7 +25,6 @@ public class RegistrationPage extends BasicPage {
     private WebElement confirmPasswordTextField;
     @FindBy(xpath = DROPDOWN_XPATH)
     private WebElement userRoleSelector;
-    @FindBy(xpath = REGISTER_BUTTON_XPATH)
     private WebElement register;
 
     private WebDriver driver;
@@ -44,9 +45,9 @@ public class RegistrationPage extends BasicPage {
         Log4j2Manager.info("===============" + "registerUser method: End" + "===============");
     }
 
-    public HomePage clickOnRegister() {
+    public HomePage clickOnRegister(String button) {
         Log4j2Manager.info("===============" + "clickOnRegister method: Start" + "===============");
-//        Utils.waitForElementVisible(register);
+        register = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
         register.click();
         Log4j2Manager.info("===============" + "clickOnRegister method: End" + "===============");
         return new HomePage(driver);
@@ -58,6 +59,6 @@ public class RegistrationPage extends BasicPage {
     private static final String PASSWORD_TEXT_FIELD_NAME = "password";
     private static final String CONFIRM_PASSWORD_TEXT_FIELD_NAME = "passwordConfirm";
     private static final String DROPDOWN_XPATH = "//select[@name='role']";
-    private static final String REGISTER_BUTTON_XPATH = "//input[@value='Register']";
+//    private static final String REGISTER_BUTTON_XPATH = "//input[@value='Register']";
 
 }

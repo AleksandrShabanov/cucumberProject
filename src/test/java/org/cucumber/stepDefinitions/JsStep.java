@@ -26,18 +26,6 @@ public class JsStep {
         jsPage = new JsPage(driver);
     }
 
-    @Given("enter username {string} and password {string}")
-    public void enterUsernameAndPassword(String login, String password) {
-        System.out.println("enter login and password");
-        loginPage.enterLogin(login);
-        loginPage.enterPassword(password);
-    }
-
-    @And("click on login button")
-    public void clickOnLoginButton() {
-        loginPage.clickLoginButton();
-    }
-
     @When("user at Home Page clicks on {string}")
     public void userAtHomePageClicksOnJsLink(String jsLink) {
         headerPage.getJsPage(jsLink);

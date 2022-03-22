@@ -37,22 +37,6 @@ public class LoginPage extends BasicPage {
         return new HomePage(driver);
     }
 
-//    public HomePage loginAs(User user) {
-//        Log4j2Manager.info("===============" + "loginAs method: Start" + "===============");
-//        if (settings.getUrl().equals(false)) {
-//            driver.get(settings.getUrl());
-//        } else {
-//            userNameTextField.clear();
-//            passwordTextField.clear();
-//            userNameTextField.sendKeys(user.getUsername());
-//            passwordTextField.sendKeys(user.getPassword());
-//            loginButton.click();
-//        }
-//        Log4j2Manager.info("===============" + "loginAs method: End" + "===============");
-//        return initPage(HomePage.class);
-//    }
-//
-//
     public RegistrationPage getRegistrationPage(String link) {
         Log4j2Manager.info("===============" + "getRegistrationPage method: Start" + "===============");
         registerLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
@@ -63,6 +47,4 @@ public class LoginPage extends BasicPage {
 
     private static final String USER_NAME_TEXT_FIELD_ID = "j_username";
     private static final String USER_PASSWORD_TEXT_FIELD_ID = "j_password";
-//    private static final String LOGIN_BUTTON_XPATH = "//input[@value='Login']";
-//    private static final String REGISTER_TEXT = "//a[text()[contains(.,\"Register\")]]";
 }

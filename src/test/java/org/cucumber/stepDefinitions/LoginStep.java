@@ -29,7 +29,6 @@ public class LoginStep {
     @Given("^user enters username '(.*)' and password '(.*)'$")
     public void entersAdminAndAdmin(String username, String password) {
         System.out.println("user enters username and password");
-
         loginPage.enterLogin(username);
         loginPage.enterPassword(password);
     }

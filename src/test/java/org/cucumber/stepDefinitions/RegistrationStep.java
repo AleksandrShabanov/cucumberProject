@@ -20,13 +20,8 @@ public class RegistrationStep {
     MyAppPage myAppPage;
     NewAppPage newAppPage;
 
-
     @Before
     public void setUp() {
-//        driver = settings.getDriver();
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-//        driver.navigate().to(settings.getUrl());
         driver = Hooks.getDriver();
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
@@ -36,11 +31,6 @@ public class RegistrationStep {
         myAppPage = new MyAppPage(driver);
         newAppPage = new NewAppPage(driver);
     }
-
-//    @After
-//    public void tearDown() {
-//        driver.quit();
-//    }
 
     @Given("^we create user$")
     public void createUser(DataTable dataTable) {
@@ -60,9 +50,9 @@ public class RegistrationStep {
         System.out.println("the user enters his data");
     }
 
-    @When("user clicks on register button")
-    public void userClicksOnRegisterButton() {
-        registrationPage.clickOnRegister();
+    @When("user clicks on {string}")
+    public void userClicksOnRegisterButton(String button) {
+        registrationPage.clickOnRegister(button);
         System.out.println("user clicks on register button");
     }
 
@@ -78,14 +68,21 @@ public class RegistrationStep {
         System.out.println("user logout");
     }
 
-    @Then("verify that the user can login")
-    public void verifyThatTheUserCanLogin() {
+    @And("login again")
+    public void loginAgain() {
         loginPage.enterLogin(user.getUsername());
         loginPage.enterPassword(user.getPassword());
-        loginPage.clickLoginButton();
-        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(user.getFname(), user.getLname())));
-        System.out.println("user is navigated to the Home page");
     }
+
+
+//    @Then("verify that the user can login")
+//    public void verifyThatTheUserCanLogin() {
+//        loginPage.enterLogin(user.getUsername());
+//        loginPage.enterPassword(user.getPassword());
+//        loginPage.clickLoginButton();
+//        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(user.getFname(), user.getLname())));
+//        System.out.println("user is navigated to the Home page");
+//    }
 
     @Then("click on {string} and verify upload {string}")
     public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myApp, String newApp) {
