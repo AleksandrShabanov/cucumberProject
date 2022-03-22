@@ -38,9 +38,9 @@ public class JsStep {
         loginPage.clickLoginButton();
     }
 
-    @When("user at Home Page clicks on js link")
-    public void userAtHomePageClicksOnJsLink() {
-        headerPage.getJsPage();
+    @When("user at Home Page clicks on {string}")
+    public void userAtHomePageClicksOnJsLink(String jsLink) {
+        headerPage.getJsPage(jsLink);
     }
 
     @Then("enter coordinates")

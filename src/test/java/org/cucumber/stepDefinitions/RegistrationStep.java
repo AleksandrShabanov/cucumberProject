@@ -87,9 +87,9 @@ public class RegistrationStep {
         System.out.println("user is navigated to the Home page");
     }
 
-    @Then("^verify that the developer can open the page to upload '(.*)'$")
-    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String newApp) {
-        headerPage.getMyAppPage();
+    @Then("click on {string} and verify upload {string}")
+    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myApp, String newApp) {
+        headerPage.getMyAppPage(myApp);
         myAppPage.getNewAppPage();
         Assert.assertTrue(newAppPage.getTitleName().getText().equals(newApp));
         System.out.println("verify that the developer can open the page to upload");

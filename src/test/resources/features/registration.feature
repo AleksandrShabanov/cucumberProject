@@ -38,7 +38,7 @@ Feature: feature to test registration functionality
     And user is on login page clicks on register link
     When the user enters his data
     And user clicks on register button
-    Then verify that the developer can open the page to upload 'New application'
+    Then click on 'My applications' and verify upload 'New application'
 
   Scenario: Register as a regular user, verify that the regular user can see the applications but cannot upload them.
     Given we create user

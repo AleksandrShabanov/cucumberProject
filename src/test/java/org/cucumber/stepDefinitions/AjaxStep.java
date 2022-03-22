@@ -35,9 +35,9 @@ public class AjaxStep {
         loginPage.clickLoginButton();
     }
 
-    @When("user at Home Page clicks on ajax test page link")
-    public void userAtHomePageClicksOnAjaxTestPageLink() {
-        headerPage.getAjaxPage();
+    @When("user at Home Page clicks on {string} link")
+    public void userAtHomePageClicksOnAjaxTestPageLink(String ajaxLink) {
+        headerPage.getAjaxPage(ajaxLink);
     }
 
     @And("user at Ajax Page enters X {string} and Y {string}")

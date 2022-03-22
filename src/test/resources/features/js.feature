@@ -6,6 +6,6 @@ Feature: feature to test js functionality
 
     Given enter username 'admin' and password 'admin'
     And click on login button
-    When user at Home Page clicks on js link
+    When user at Home Page clicks on 'JS test page'
     Then enter coordinates
     And check is Alert displayed

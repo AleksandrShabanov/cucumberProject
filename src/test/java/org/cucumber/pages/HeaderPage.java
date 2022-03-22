@@ -1,22 +1,17 @@
 package org.cucumber.pages;
 
+import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HeaderPage extends BasicPage {
 
-    @FindBy(linkText = MY_APP_LINK)
     private WebElement myAppLink;
-    @FindBy(linkText = AJAX_LINK)
     private WebElement ajaxLink;
-    @FindBy(linkText = JS_LINK)
     private WebElement jsLink;
-    @FindBy(linkText = HOME_LINK)
-    private WebElement homeLink;
 
     WebDriver driver;
 
@@ -38,29 +33,32 @@ public class HeaderPage extends BasicPage {
         return myAppLink;
     }
 
-    public MyAppPage getMyAppPage() {
+    public MyAppPage getMyAppPage(String link) {
         Log4j2Manager.info("===============" + "getMyAppPage method: Start" + "===============");
+        myAppLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
         myAppLink.click();
         Log4j2Manager.info("===============" + "getMyAppPage method: End" + "===============");
         return new MyAppPage(driver);
     }
 
-    public AjaxPage getAjaxPage() {
+    public AjaxPage getAjaxPage(String link) {
         Log4j2Manager.info("===============" + "getAjaxPage method: Start" + "===============");
+        ajaxLink =  driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
         ajaxLink.click();
         Log4j2Manager.info("===============" + "getAjaxPage method: End" + "===============");
         return new AjaxPage(driver);
     }
 
-    public JsPage getJsPage() {
+    public JsPage getJsPage(String link) {
         Log4j2Manager.info("===============" + "getJsPage method: Start" + "===============");
+        jsLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
         jsLink.click();
         Log4j2Manager.info("===============" + "getJsPage method: End" + "===============");
         return new JsPage(driver);
     }
 
-    private static final String MY_APP_LINK = "My applications";
-    private static final String AJAX_LINK = "Ajax test page";
-    private static final String JS_LINK = "JS test page";
-    private static final String HOME_LINK = "Home";
+//    private static final String MY_APP_LINK = "My applications";
+//    private static final String AJAX_LINK = "Ajax test page";
+//    private static final String JS_LINK = "JS test page";
+//    private static final String HOME_LINK = "Home";
 }
