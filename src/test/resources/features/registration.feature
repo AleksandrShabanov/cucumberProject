@@ -8,7 +8,7 @@ Feature: feature to test registration functionality
       | password        | qwerty     |
       | confirmPassword | qwerty     |
       | role            | USER       |
-    And user is on login page clicks on 'Register' link
+    And user is on login page clicks on 'Register as a new user' link
     When the user enters his data
     And user clicks on 'Register'
     Then verify that the user is logged in
@@ -21,7 +21,7 @@ Feature: feature to test registration functionality
       | password        | qwerty     |
       | confirmPassword | qwerty     |
       | role            | USER       |
-    And user is on login page clicks on 'Register' link
+    And user is on login page clicks on 'Register as a new user' link
     When the user enters his data
     And user clicks on 'Register'
     When user logout
@@ -38,7 +38,7 @@ Feature: feature to test registration functionality
       | password        | qwerty     |
       | confirmPassword | qwerty     |
       | role            | DEVELOPER  |
-    And user is on login page clicks on 'Register' link
+    And user is on login page clicks on 'Register as a new user' link
     When the user enters his data
     And user clicks on 'Register'
     Then click on 'My applications' and verify upload 'New application'
@@ -51,7 +51,7 @@ Feature: feature to test registration functionality
       | password        | qwerty     |
       | confirmPassword | qwerty     |
       | role            | USER       |
-    And user is on login page clicks on 'Register' link
+    And user is on login page clicks on 'Register as a new user' link
     When the user enters his data
     And user clicks on 'Register'
     Then verify that the user is logged in

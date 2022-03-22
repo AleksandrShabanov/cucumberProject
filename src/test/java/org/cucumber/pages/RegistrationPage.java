@@ -2,7 +2,6 @@ package org.cucumber.pages;
 
 import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Log4j2Manager;
-import org.cucumber.framework.Utils;
 import org.cucumber.models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,7 @@ public class RegistrationPage extends BasicPage {
     private WebElement confirmPasswordTextField;
     @FindBy(xpath = DROPDOWN_XPATH)
     private WebElement userRoleSelector;
-    private WebElement register;
+    private WebElement registerButton;
 
     private WebDriver driver;
 
@@ -47,8 +46,8 @@ public class RegistrationPage extends BasicPage {
 
     public HomePage clickOnRegister(String button) {
         Log4j2Manager.info("===============" + "clickOnRegister method: Start" + "===============");
-        register = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
-        register.click();
+        registerButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
+        registerButton.click();
         Log4j2Manager.info("===============" + "clickOnRegister method: End" + "===============");
         return new HomePage(driver);
     }
