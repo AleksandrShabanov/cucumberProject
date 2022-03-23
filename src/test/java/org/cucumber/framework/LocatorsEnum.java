@@ -4,6 +4,7 @@ public enum LocatorsEnum {
 
     BASE_LINK("//a[text()='%s']"),
     BASE_BUTTON("//input[@value='%s']")
+
     ;
 
     private final String text;

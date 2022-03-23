@@ -20,7 +20,7 @@ public class AjaxStep {
     public void setUp() {
         driver = Hooks.getDriver();
         basicPage = new BasicPage(driver);
-        loginPage = basicPage.forceLogout(driver);
+        loginPage = basicPage.forceLogout(driver, "Logout");
         headerPage = new HeaderPage(driver);
         ajaxPage = new AjaxPage(driver);
     }
@@ -30,11 +30,6 @@ public class AjaxStep {
         loginPage.enterLogin(login);
         loginPage.enterPassword(password);
     }
-
-//    @And("the user clicks on login button")
-//    public void theUserClicksOnLoginButton() {
-//        loginPage.clickLoginButton();
-//    }
 
     @When("user at Home Page clicks on {string} link")
     public void userAtHomePageClicksOnAjaxTestPageLink(String ajaxLink) {

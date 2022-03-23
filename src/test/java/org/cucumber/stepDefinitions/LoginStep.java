@@ -20,16 +20,19 @@ public class LoginStep {
     public void setUp() {
         driver = Hooks.getDriver();
         basicPage = new BasicPage(driver);
-        loginPage = basicPage.forceLogout(driver);
+        loginPage = basicPage.forceLogout(driver, "Logout");
         headerPage = new HeaderPage(driver);
         homePage = new HomePage(driver);
     }
 
-
-    @Given("^user enters username '(.*)' and password '(.*)'$")
-    public void entersAdminAndAdmin(String username, String password) {
+    @Given("user enters username {string}")
+    public void enterUsername(String username) {
         System.out.println("user enters username and password");
         loginPage.enterLogin(username);
+    }
+
+    @And("user enters password {string}")
+    public void enterPassword(String password) {
         loginPage.enterPassword(password);
     }
 

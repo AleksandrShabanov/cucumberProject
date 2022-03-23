@@ -3,27 +3,30 @@ package org.cucumber.pages;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.jsonResponse.Root;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.Objects;
 
 public class DetailsPage extends BasicPage {
 
-    @FindBy(linkText = DOWNLOAD_BUTTON)
-    private WebElement downloadButton;
-    @FindBy(linkText = EDIT_BUTTON)
-    private WebElement editButton;
+//    @FindBy(linkText = DOWNLOAD_LINK)
+    private WebElement downloadLink;
+//    @FindBy(linkText = EDIT_LINK)
+    private WebElement editLink;
     @FindBy(xpath = TEXT_AREA_XPATH)
     private WebElement textAreaDescription;
     @FindBy(xpath = UPDATE_BUTTON_XPATH)
     private WebElement updateButton;
-    @FindBy(linkText = DELETE_BUTTON)
-    private WebElement deleteButton;
+//    @FindBy(linkText = DELETE_LINK)
+    private WebElement deleteLink;
     private Alert alertConfirmDelete;
 
     @FindBy(xpath = DESCRIPTION_TEXT_XPATH)
@@ -50,6 +53,8 @@ public class DetailsPage extends BasicPage {
 
     public DetailsPage(WebDriver driver) {
         super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public WebElement getJsonResponse() {
@@ -101,10 +106,11 @@ public class DetailsPage extends BasicPage {
         return detailsPage;
     }
 
-    public DetailsPage downloadFile() {
+    public DetailsPage downloadFile(String link) {
         Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
+        downloadLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
         try {
-            downloadButton.click();
+            downloadLink.click();
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -112,17 +118,19 @@ public class DetailsPage extends BasicPage {
         return new DetailsPage(driver);
     }
 //
-//    public void deleteFile() {
-//        Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");
-//        deleteButton.click();
-//        alertConfirmDelete = driver.switchTo().alert();
-//        alertConfirmDelete.accept();
-//        Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");
-//    }
+    public void deleteFile(String link) {
+        Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");
+        deleteLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
+        deleteLink.click();
+        alertConfirmDelete = driver.switchTo().alert();
+        alertConfirmDelete.accept();
+        Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");
+    }
 
-    public void editFile() {
+    public void editFile(String link) {
         Log4j2Manager.info("===============" + "editFile method: Start" + "===============");
-        editButton.click();
+        editLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
+        editLink.click();
         textAreaDescription.sendKeys(" and My name's Luke");
         updateButton.click();
         Log4j2Manager.info("===============" + "editFile method: End" + "===============");
@@ -152,9 +160,9 @@ public class DetailsPage extends BasicPage {
         return Objects.hash(titleOfApp, descriptionOfApp, categoryOfApp, authorOfApp, numberOfDownloadsOfApp);
     }
 
-    private static final String DOWNLOAD_BUTTON = "Download";
-    private static final String DELETE_BUTTON = "Delete";
-    private static final String EDIT_BUTTON = "Edit";
+//    private static final String DOWNLOAD_LINK = "Download";
+//    private static final String DELETE_LINK = "Delete";
+//    private static final String EDIT_LINK = "Edit";
     private static final String TEXT_AREA_XPATH = "//textarea[@name='description']";
     private static final String UPDATE_BUTTON_XPATH = "//input[@type='submit']";
 

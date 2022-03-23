@@ -25,7 +25,7 @@ public class RegistrationStep {
         driver = Hooks.getDriver();
         headerPage = new HeaderPage(driver);
         basicPage = new BasicPage(driver);
-        loginPage = basicPage.forceLogout(driver);
+        loginPage = basicPage.forceLogout(driver, "Logout");
         homePage = new HomePage(driver);
         registrationPage = new RegistrationPage(driver);
         myAppPage = new MyAppPage(driver);
@@ -62,9 +62,9 @@ public class RegistrationStep {
         System.out.println("user is navigated to the Home page");
     }
 
-    @When("user logout")
-    public void userLogout() {
-        basicPage.forceLogout(driver);
+    @When("user {string}")
+    public void userLogout(String logout) {
+        basicPage.forceLogout(driver, logout);
         System.out.println("user logout");
     }
 
@@ -74,15 +74,6 @@ public class RegistrationStep {
         loginPage.enterPassword(user.getPassword());
     }
 
-
-//    @Then("verify that the user can login")
-//    public void verifyThatTheUserCanLogin() {
-//        loginPage.enterLogin(user.getUsername());
-//        loginPage.enterPassword(user.getPassword());
-//        loginPage.clickLoginButton();
-//        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(user.getFname(), user.getLname())));
-//        System.out.println("user is navigated to the Home page");
-//    }
 
     @Then("click on {string} and {string} and verify upload {string}")
     public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myAppLink, String newAppLink, String string) {

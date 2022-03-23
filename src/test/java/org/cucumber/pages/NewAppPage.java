@@ -23,7 +23,7 @@ public class NewAppPage extends BasicPage {
     private WebElement addImageButton;
     @FindBy(xpath = ADD_ICON_BUTTON_XPATH)
     private WebElement addIconButton;
-    private File file = new File("src/test/resources/XwingHeroHome-SW.jpg");
+    private File file = new File("src/test/resources/files/XwingHeroHome-SW.jpg");
     WebDriver driver;
 
     public WebElement getTitleName() {
@@ -51,6 +51,14 @@ public class NewAppPage extends BasicPage {
         createButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
         createButton.click();
         return new HomePage(driver);
+    }
+
+    public void addImage() {
+        addImageButton.sendKeys(file.getAbsolutePath());
+    }
+
+    public void addIcon() {
+        addIconButton.sendKeys(file.getAbsolutePath());
     }
 
 //    public MyAppPage createNewAppWithImage() {

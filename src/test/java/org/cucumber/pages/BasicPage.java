@@ -1,5 +1,6 @@
 package org.cucumber.pages;
 
+import org.cucumber.framework.LocatorsEnum;
 import org.cucumber.framework.Settings;
 import org.cucumber.framework.Utils;
 import org.openqa.selenium.By;
@@ -12,7 +13,7 @@ import static org.cucumber.framework.Utils.isElementPresent;
 
 public class BasicPage {
 
-    private final static By logoutBy = By.xpath("//a[contains(text(), 'Logout')]");
+    private By logoutBy;
     private final static By flash = By.cssSelector("p.flash");
 
     private WebDriver driver;
@@ -24,7 +25,8 @@ public class BasicPage {
     }
 
 
-        public LoginPage forceLogout(WebDriver driver) {
+        public LoginPage forceLogout(WebDriver driver, String link) {
+        logoutBy = By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link));
         driver.get(settings.getUrl());
         if (isElementPresent(logoutBy, driver)) {
             driver.findElement(logoutBy).click();

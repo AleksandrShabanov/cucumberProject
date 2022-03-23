@@ -21,7 +21,7 @@ public class JsStep {
     public void setUp() {
         driver = Hooks.getDriver();
         basicPage = new BasicPage(driver);
-        loginPage = basicPage.forceLogout(driver);
+        loginPage = basicPage.forceLogout(driver, "Logout");
         headerPage = new HeaderPage(driver);
         jsPage = new JsPage(driver);
     }
