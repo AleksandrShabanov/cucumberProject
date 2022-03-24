@@ -20,7 +20,6 @@ Feature: feature to test registration user functionality
     And login again
     When user clicks on 'Login' button
     Then verify that the user is logged in
-#    Then verify that the user can login
 
   Scenario: Register as a regular user, verify that the regular user can see the applications but cannot upload them.
     Then verify that the user is logged in

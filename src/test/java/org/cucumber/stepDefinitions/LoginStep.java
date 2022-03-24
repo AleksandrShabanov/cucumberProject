@@ -25,15 +25,9 @@ public class LoginStep {
         homePage = new HomePage(driver);
     }
 
-    @Given("user enters username {string}")
-    public void enterUsername(String username) {
-        System.out.println("user enters username and password");
-        loginPage.enterLogin(username);
-    }
-
-    @And("user enters password {string}")
-    public void enterPassword(String password) {
-        loginPage.enterPassword(password);
+    @Given("type to input with name {string} text: {string}")
+    public void enterData(String id, String data) {
+        loginPage.enterData(id, data);
     }
 
     @When("user clicks on {string} button")

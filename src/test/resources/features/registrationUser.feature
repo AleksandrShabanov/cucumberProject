@@ -18,6 +18,8 @@ Feature: feature to test registration user functionality
   Scenario: Register a new user, logout, and verify that the user can login
     When user 'Logout'
     And login again
+    Given type to input with name 'j_username' text: 'admin'
+    And type to input with name 'j_password' text: 'admin'
     When user clicks on 'Login' button
     Then verify that the user is logged in
 

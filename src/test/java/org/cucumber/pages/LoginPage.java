@@ -10,10 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasicPage {
 
-    @FindBy(id = USER_NAME_TEXT_FIELD_ID)
-    private WebElement userNameTextField;
-    @FindBy(id = USER_PASSWORD_TEXT_FIELD_ID)
-    private WebElement passwordTextField;
+    private WebElement textField;
+//    @FindBy(id = USER_NAME_TEXT_FIELD_ID)
+//    private WebElement userNameTextField;
+//    @FindBy(id = USER_PASSWORD_TEXT_FIELD_ID)
+//    private WebElement passwordTextField;
     private WebElement loginButton;
     private WebElement registerLink;
 
@@ -25,11 +26,16 @@ public class LoginPage extends BasicPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void enterLogin(String username) { userNameTextField.sendKeys(username); }
-
-    public void enterPassword(String password) {
-        passwordTextField.sendKeys(password);
+    public void enterData(String id, String data) {
+        textField = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_TEXT_FIELD_ID.getText(), id)));
+        textField.sendKeys(data);
     }
+
+//    public void enterLogin(String username) { userNameTextField.sendKeys(username); }
+//
+//    public void enterPassword(String password) {
+//        passwordTextField.sendKeys(password);
+//    }
 
     public HomePage clickLoginButton(String button) {
         loginButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
@@ -45,6 +51,6 @@ public class LoginPage extends BasicPage {
         return new RegistrationPage(driver);
     }
 
-    private static final String USER_NAME_TEXT_FIELD_ID = "j_username";
-    private static final String USER_PASSWORD_TEXT_FIELD_ID = "j_password";
+//    private static final String USER_NAME_TEXT_FIELD_ID = "j_username";
+//    private static final String USER_PASSWORD_TEXT_FIELD_ID = "j_password";
 }

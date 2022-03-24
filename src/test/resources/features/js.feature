@@ -4,8 +4,8 @@ Feature: feature to test js functionality
   Enter the coordinates into the input fields and press ‘Process’.
   Handle the alert and verify that the message ‘Whoo Hoooo! Correct!’ is displayed.
 
-    Given user enters username 'admin'
-    And user enters password 'admin'
+    Given type to input with name 'j_username' text: 'admin'
+    And type to input with name 'j_password' text: 'admin'
     And user clicks on 'Login' button
     When user at Home Page clicks on 'JS test page'
     Then enter coordinates
