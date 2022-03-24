@@ -9,6 +9,7 @@ org\cucumber\framework\BrowserType.class
 org\cucumber\stepDefinitions\LoginStep.class
 org\cucumber\models\User.class
 org\cucumber\framework\Settings$1.class
+org\cucumber\stepDefinitions\AppStep.class
 org\cucumber\models\UserBuilder.class
 org\cucumber\pages\BasicPage.class
 org\cucumber\pages\AjaxPage.class

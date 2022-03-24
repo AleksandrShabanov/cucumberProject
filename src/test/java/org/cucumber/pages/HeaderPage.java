@@ -12,6 +12,7 @@ public class HeaderPage extends BasicPage {
     private WebElement myAppLink;
     private WebElement ajaxLink;
     private WebElement jsLink;
+    private WebElement link;
 
     WebDriver driver;
 

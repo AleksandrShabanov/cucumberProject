@@ -1,1 +1,0 @@
-{"uuid":"99f8a4f0-9abb-44db-b4a0-522d7fdf92d0","name":"Enter one valid number and one string (not a number), click ‘Sum’, wait for the result, and verify that the message ‘Incorrect data’ appears","children":["0c3d685f-af83-40bb-9308-6f28a90b318c"],"befores":[],"afters":[],"start":1647953988031,"stop":1647953999193}

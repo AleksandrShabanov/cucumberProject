@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.datatable.DataTable;
 
+import java.util.Map;
+
 public class RegistrationStep {
 
     WebDriver driver;
@@ -38,16 +40,23 @@ public class RegistrationStep {
         System.out.println(user);
     }
 
-    @And("user is on login page clicks on {string} link")
+    @Given("user is on login page clicks on {string} link")
     public void userClicksOnRegisterLink(String registerLink) {
         loginPage.getRegistrationPage(registerLink);
         System.out.println("user clicks on register link");
     }
 
-    @When("the user enters his data")
-    public void userEntersUsernameFNameLNamePasswordAndConfirmPassword() {
-        registrationPage.registerUser(user);
-        System.out.println("the user enters his data");
+    @And("^user enters his data to ([^\"]*) and type([^\"]*)$")
+    public void theUserEntersHisDataToTextFieldAndTypeText(String textFiled, String text, Map<String, String> map) {
+        Map<String, String> dataMap = map;
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            registrationPage.enterTextData(entry.getKey(), entry.getValue());
+        }
+    }
+
+    @When("set {string} role")
+    public void setUserRole(String role) {
+        registrationPage.setUserRoleSelector(role);
     }
 
     @When("user clicks on {string}")
@@ -56,9 +65,9 @@ public class RegistrationStep {
         System.out.println("user clicks on register button");
     }
 
-    @Then("verify that the user is logged in")
-    public void verifyThatTheUserIsLoggedIn() {
-        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(user.getFname(), user.getLname())));
+    @Then("verify that the user with name {string} and last name {string} is logged in")
+    public void verifyThatTheUserIsLoggedIn(String fName, String lName) {
+        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName)));
         System.out.println("user is navigated to the Home page");
     }
 
@@ -68,25 +77,21 @@ public class RegistrationStep {
         System.out.println("user logout");
     }
 
-    @And("login again")
-    public void loginAgain() {
-        loginPage.enterLogin(user.getUsername());
-        loginPage.enterPassword(user.getPassword());
-    }
-
-
     @Then("click on {string} and {string} and verify upload {string}")
-    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myAppLink, String newAppLink, String string) {
+    public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myAppLink, String newAppLink, String string) throws InterruptedException {
         headerPage.getMyAppPage(myAppLink);
         myAppPage.getNewAppPage(newAppLink);
         Assert.assertTrue(newAppPage.getTitleName().getText().equals(string));
         System.out.println("verify that the developer can open the page to upload");
     }
 
-
     @Then("verify that the user can see the app but cannot upload them")
     public void verifyThatTheUserCanSeeTheAppButCannotUploadThem() {
         Assert.assertFalse(basicPage.isElementDisplayed(headerPage.getMyAppLink()));
         System.out.println("verify that the user can see the app but cannot upload them");
     }
+
+
+
+
 }

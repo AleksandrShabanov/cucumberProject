@@ -25,11 +25,11 @@ public class AjaxStep {
         ajaxPage = new AjaxPage(driver);
     }
 
-    @Given("the user enters username {string} and password {string}")
-    public void theUserEntersUsernameAndPassword(String login, String password) {
-        loginPage.enterLogin(login);
-        loginPage.enterPassword(password);
-    }
+//    @Given("the user enters username {string} and password {string}")
+//    public void theUserEntersUsernameAndPassword(String login, String password) {
+//        loginPage.enterLogin(login);
+//        loginPage.enterPassword(password);
+//    }
 
     @When("user at Home Page clicks on {string} link")
     public void userAtHomePageClicksOnAjaxTestPageLink(String ajaxLink) {

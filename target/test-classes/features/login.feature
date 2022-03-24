@@ -3,8 +3,6 @@ Feature: feature to test login functionality
   Scenario: Login as a valid user
     Given type to input with name 'j_username' text: 'admin'
     And type to input with name 'j_password' text: 'admin'
-#    Given user enters username 'admin'
-#    And user enters password 'admin'
     When user clicks on 'Login' button
     Then check valid login using fName 'Ivan' and lName 'Petrov'
 

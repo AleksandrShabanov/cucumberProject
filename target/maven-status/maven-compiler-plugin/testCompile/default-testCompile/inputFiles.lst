@@ -25,6 +25,7 @@ C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\HomePa
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\BasicPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse\Root.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\models\UserBuilder.java
+C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\AppStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\LoginPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\RunCucumberTest.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\AjaxPage.java
