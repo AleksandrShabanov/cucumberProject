@@ -26,6 +26,4 @@ public class MyAppPage extends BasicPage {
         return new NewAppPage(driver);
     }
 
-//    public static final String ADD_NEW_APP_LINK = "Click to add new application";
-
 }

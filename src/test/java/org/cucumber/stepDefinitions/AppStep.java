@@ -71,11 +71,12 @@ public class AppStep {
 
     @And("at Home Page click on {string} link")
     public void atHomePageClickOnLink(String detailsLink) {
-        if (detailsLink == "Details") {
             homePage.getDetailsPage(detailsLink);
-        } else {
-            homePage.getNewAppDetailsPage();
-        }
+    }
+
+    @And("at Home Page click on details new app link")
+    public void atHomePageClickOnDetailsNewAppLink() {
+        homePage.getNewAppDetailsPage();
     }
 
     @When("at Details Page click on {string}")

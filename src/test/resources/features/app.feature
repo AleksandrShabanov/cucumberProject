@@ -1,6 +1,7 @@
-Feature: feature to test applications functionality
+@smoketest
+Feature:feature to test applications functionality
 
-  Scenario: Create a new application without images. Verify that it is displayed correctly and can be downloaded.
+  Scenario:Create a new application without images. Verify that it is displayed correctly and can be downloaded.
     Given type to input with name 'j_username' text: 'admin'
     And type to input with name 'j_password' text: 'admin'
     When user clicks on 'Login' button
@@ -56,6 +57,6 @@ Feature: feature to test applications functionality
     And at My applications page 'Click to add new application'
     When create new app with name 'newAppAVS123' and description 'This is a new app'
     And click on 'Create'
-    And at Home Page click on 'Details new app' link
+    And at Home Page click on details new app link
     When 'Download' file many times
     Then verify that my app in popular section
