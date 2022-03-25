@@ -29,8 +29,8 @@ Feature:feature to test applications functionality
     And at Home Page click on 'My applications'
     And at My applications page 'Click to add new application'
     When create new app with name 'newAppWithImage_AVS' and description 'This is a new application with image and icon'
-    When press choose file for add image
-    And press choose file for add icon
+    When press choose file for add 'image'
+    And press choose file for add 'icon'
     And click on 'Create'
     Then verify that app was create
 

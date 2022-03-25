@@ -5,19 +5,13 @@ import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasicPage {
 
     private WebElement textField;
-//    @FindBy(id = USER_NAME_TEXT_FIELD_ID)
-//    private WebElement userNameTextField;
-//    @FindBy(id = USER_PASSWORD_TEXT_FIELD_ID)
-//    private WebElement passwordTextField;
     private WebElement loginButton;
     private WebElement registerLink;
-
     private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
@@ -30,12 +24,6 @@ public class LoginPage extends BasicPage {
         textField = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_TEXT_FIELD_ID.getText(), id)));
         textField.sendKeys(data);
     }
-
-//    public void enterLogin(String username) { userNameTextField.sendKeys(username); }
-//
-//    public void enterPassword(String password) {
-//        passwordTextField.sendKeys(password);
-//    }
 
     public HomePage clickLoginButton(String button) {
         loginButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
@@ -50,7 +38,4 @@ public class LoginPage extends BasicPage {
         Log4j2Manager.info("===============" + "getRegistrationPage method: End" + "===============");
         return new RegistrationPage(driver);
     }
-
-//    private static final String USER_NAME_TEXT_FIELD_ID = "j_username";
-//    private static final String USER_PASSWORD_TEXT_FIELD_ID = "j_password";
 }

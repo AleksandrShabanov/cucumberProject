@@ -2,20 +2,17 @@ package org.cucumber.stepDefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.cucumber.framework.Log4j2Manager;
-import org.cucumber.framework.Settings;
 import org.cucumber.pages.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class JsStep {
 
-    WebDriver driver;
-    Settings settings = new Settings();
-    LoginPage loginPage;
-    HeaderPage headerPage;
-    BasicPage basicPage;
-    JsPage jsPage;
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private HeaderPage headerPage;
+    private BasicPage basicPage;
+    private JsPage jsPage;
 
     @Before()
     public void setUp() {

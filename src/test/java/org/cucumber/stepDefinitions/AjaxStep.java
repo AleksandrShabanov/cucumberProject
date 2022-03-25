@@ -9,12 +9,11 @@ import org.openqa.selenium.WebDriver;
 
 public class AjaxStep {
 
-    WebDriver driver;
-    Settings settings = new Settings();
-    LoginPage loginPage;
-    HeaderPage headerPage;
-    BasicPage basicPage;
-    AjaxPage ajaxPage;
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private HeaderPage headerPage;
+    private BasicPage basicPage;
+    private AjaxPage ajaxPage;
 
     @Before()
     public void setUp() {
@@ -25,11 +24,6 @@ public class AjaxStep {
         ajaxPage = new AjaxPage(driver);
     }
 
-//    @Given("the user enters username {string} and password {string}")
-//    public void theUserEntersUsernameAndPassword(String login, String password) {
-//        loginPage.enterLogin(login);
-//        loginPage.enterPassword(password);
-//    }
 
     @When("user at Home Page clicks on {string} link")
     public void userAtHomePageClicksOnAjaxTestPageLink(String ajaxLink) {

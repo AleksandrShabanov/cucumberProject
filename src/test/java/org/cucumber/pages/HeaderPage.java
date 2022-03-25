@@ -12,9 +12,7 @@ public class HeaderPage extends BasicPage {
     private WebElement myAppLink;
     private WebElement ajaxLink;
     private WebElement jsLink;
-    private WebElement link;
-
-    WebDriver driver;
+    private WebDriver driver;
 
     public HeaderPage (WebDriver driver) {
         super(driver);
@@ -57,9 +55,4 @@ public class HeaderPage extends BasicPage {
         Log4j2Manager.info("===============" + "getJsPage method: End" + "===============");
         return new JsPage(driver);
     }
-
-//    private static final String MY_APP_LINK = "My applications";
-//    private static final String AJAX_LINK = "Ajax test page";
-//    private static final String JS_LINK = "JS test page";
-//    private static final String HOME_LINK = "Home";
 }

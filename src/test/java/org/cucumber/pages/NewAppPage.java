@@ -19,10 +19,7 @@ public class NewAppPage extends BasicPage {
     @FindBy(xpath = TEXT_AREA_XPATH)
     private WebElement textAreaDescription;
     private WebElement createButton;
-    @FindBy(xpath = ADD_IMAGE_BUTTON_XPATH)
-    private WebElement addImageButton;
-    @FindBy(xpath = ADD_ICON_BUTTON_XPATH)
-    private WebElement addIconButton;
+    private WebElement addButton;
     private File file = new File("src/test/resources/files/XwingHeroHome-SW.jpg");
     WebDriver driver;
 
@@ -35,10 +32,6 @@ public class NewAppPage extends BasicPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-//    public void assertTitle() {
-//        (titleName.equals("New application"));
-//    }
 
     public void createNewApp(String name, String descr) {
         Log4j2Manager.info("===============" + "createNewApp method: Start" + "===============");
@@ -53,30 +46,13 @@ public class NewAppPage extends BasicPage {
         return new HomePage(driver);
     }
 
-    public void addImage() {
-        addImageButton.sendKeys(file.getAbsolutePath());
+    public void add(String name) {
+        addButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON_NAME.getText(), name)));
+        addButton.sendKeys(file.getAbsolutePath());
     }
-
-    public void addIcon() {
-        addIconButton.sendKeys(file.getAbsolutePath());
-    }
-
-//    public MyAppPage createNewAppWithImage() {
-//        Log4j2Manager.info("===============" + "createNewAppWithImage method: Start" + "===============");
-//        titleTextField.sendKeys("newAppWithImage_AVS");
-//        textAreaDescription.sendKeys("This is a new application with image and icon");
-//        addImageButton.sendKeys(file.getAbsolutePath());
-//        addIconButton.sendKeys(file.getAbsolutePath());
-//        createButton.click();
-//        Log4j2Manager.info("===============" + "createNewAppWithImage method: End" + "===============");
-//        return initPage(MyAppPage.class);
-//    }
 
     private static final String TITLE_NAME_TAG_NAME = "h1";
     private static final String TITLE_TEXT_FIELD_XPATH = "//input[@name='title']";
     private static final String TEXT_AREA_XPATH = "//textarea[@name='description']";
-//    private static final String CREATE_BUTTON_XPATH = "//input[@type='submit']";
-    private static final String ADD_IMAGE_BUTTON_XPATH = "//input[@name='image']";
-    private static final String ADD_ICON_BUTTON_XPATH = "//input[@name='icon']";
 
 }

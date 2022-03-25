@@ -12,7 +12,6 @@ public class HomePage extends BasicPage {
 
     @FindBy(xpath = MY_APP_POPULAR_XPATH)
     private WebElement myAppPopular;
-//    @FindBy(linkText = DETAILS_LINK)
     private WebElement detailsLink;
     @FindBy(xpath = NEW_APP_DETAILS_LINK)
     private WebElement newAppDetailsLink;
@@ -34,7 +33,6 @@ public class HomePage extends BasicPage {
     public WebElement getNewAppWithImage() {
         return newAppWithImage;
     }
-
 
     public WebElement isMyAppPopular() {
         Log4j2Manager.info("===============" + "isMyAppPopular method: Start" + "===============");
@@ -59,7 +57,6 @@ public class HomePage extends BasicPage {
     }
 
     private static final String MY_APP_POPULAR_XPATH = "//div[@class=\"popular-app\"]//child::a[@href=\"/app?title=newAppAVS123\"]";
-//    private static final String DETAILS_LINK = "Details";
     private static final String NEW_APP_DETAILS_LINK = "//a[@href='/app?title=newAppAVS123']";
     private static final String NEW_APP_ELEMENT_XPATH = "//div[@class='name' and contains(text(),'newAppAVS')]";
     private static final String NEW_APP_ELEMENT_WITH_IMAGE_XPATH = "//div[@class='name' and contains(text(),'newAppWithImage_AVS')]";

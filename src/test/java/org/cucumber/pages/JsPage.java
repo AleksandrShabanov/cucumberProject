@@ -2,7 +2,6 @@ package org.cucumber.pages;
 
 import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.framework.Settings;
-import org.cucumber.framework.Utils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +16,14 @@ public class JsPage extends BasicPage {
     private WebElement top;
     @FindBy(id = LEFT_TEXT_FIELD_ID)
     private WebElement left;
-    WebDriver driver;
-    Settings settings = new Settings();
+    private WebDriver driver;
+    private Settings settings = new Settings();
     private JavascriptExecutor js = (JavascriptExecutor) driver;
     private Alert message;
+
+    public JsPage(WebDriver driver) {
+        super(driver);
+    }
 
     public void enterCoordinates(JavascriptExecutor js) {
         Log4j2Manager.info("===============" + "enterCoordinates method: Start" + "===============");
@@ -51,8 +54,4 @@ public class JsPage extends BasicPage {
 
     private static final String TOP_TEXT_FIELD_ID = "top";
     private static final String LEFT_TEXT_FIELD_ID = "left";
-
-    public JsPage(WebDriver driver) {
-        super(driver);
-    }
 }

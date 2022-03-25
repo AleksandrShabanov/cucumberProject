@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.cucumber.stepDefinitions.SmokeTest" time="54.004" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.cucumber.stepDefinitions.SmokeTest" time="53.872" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -19,7 +19,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.14\bin"/>
-    <property name="sun.java.command" value="C:\Users\avshabanov\AppData\Local\Temp\surefire516549692794129609\surefirebooter16762613987266189369.jar C:\Users\avshabanov\AppData\Local\Temp\surefire516549692794129609 2022-03-24T18-15-14_323-jvmRun1 surefire1475814337320333333tmp surefire_09928886787153743753tmp"/>
+    <property name="sun.java.command" value="C:\Users\avshabanov\AppData\Local\Temp\surefire14218715293585472931\surefirebooter4097731999200653452.jar C:\Users\avshabanov\AppData\Local\Temp\surefire14218715293585472931 2022-03-25T11-08-13_839-jvmRun1 surefire16481453062276254881tmp surefire_010389654617797750781tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\avshabanov\repo\cucumberProject\target\test-classes;C:\Users\avshabanov\repo\cucumberProject\target\classes;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-junit5\2.17.3\allure-junit5-2.17.3.jar;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-junit-platform\2.17.3\allure-junit-platform-2.17.3.jar;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-test-filter\2.17.3\allure-test-filter-2.17.3.jar;C:\Users\avshabanov\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\avshabanov\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.2\junit-platform-launcher-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\avshabanov\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\avshabanov\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.2\selenium-java-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.2\selenium-api-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.2\selenium-devtools-v85-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v95\4.1.2\selenium-devtools-v95-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v96\4.1.2\selenium-devtools-v96-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v97\4.1.2\selenium-devtools-v97-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.2\selenium-edge-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.2\selenium-firefox-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.1.2\selenium-firefox-xpi-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.2\selenium-ie-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.2\selenium-opera-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.2\selenium-remote-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-buffer\4.1.73.Final\netty-buffer-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-codec-http\4.1.73.Final\netty-codec-http-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-codec\4.1.73.Final\netty-codec-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-handler\4.1.73.Final\netty-handler-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-tcnative-classes\2.0.46.Final\netty-tcnative-classes-2.0.46.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-common\4.1.73.Final\netty-common-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.73.Final\netty-transport-classes-epoll-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.73.Final\netty-transport-classes-kqueue-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-native-epoll\4.1.73.Final\netty-transport-native-epoll-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.73.Final\netty-transport-native-kqueue-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.73.Final\netty-transport-native-unix-common-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport\4.1.73.Final\netty-transport-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-resolver\4.1.73.Final\netty-resolver-4.1.73.Final.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-api\1.10.1\opentelemetry-api-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-context\1.10.1\opentelemetry-context-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.10.1\opentelemetry-exporter-logging-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.10.1-alpha\opentelemetry-sdk-metrics-1.10.1-alpha.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.10.1-alpha\opentelemetry-sdk-logs-1.10.1-alpha.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.10.1\opentelemetry-sdk-common-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.10.1\opentelemetry-sdk-extension-autoconfigure-spi-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.10.1-alpha\opentelemetry-sdk-extension-autoconfigure-1.10.1-alpha.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.10.1\opentelemetry-sdk-trace-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.10.1\opentelemetry-sdk-1.10.1.jar;C:\Users\avshabanov\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.10.1-alpha\opentelemetry-semconv-1.10.1-alpha.jar;C:\Users\avshabanov\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\avshabanov\.m2\repository\net\bytebuddy\byte-buddy\1.12.7\byte-buddy-1.12.7.jar;C:\Users\avshabanov\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\avshabanov\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\avshabanov\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\avshabanov\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\avshabanov\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\avshabanov\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\avshabanov\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.2\selenium-http-4.1.2.jar;C:\Users\avshabanov\.m2\repository\net\jodah\failsafe\2.4.4\failsafe-2.4.4.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.2\selenium-safari-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.2\selenium-support-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.2\selenium-chrome-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\avshabanov\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\avshabanov\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\avshabanov\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\avshabanov\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\avshabanov\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\avshabanov\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\avshabanov\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\avshabanov\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar;C:\Users\avshabanov\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.2\selenium-chromium-driver-4.1.2.jar;C:\Users\avshabanov\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.2\selenium-json-4.1.2.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-junit\7.2.3\cucumber-junit-7.2.3.jar;C:\Users\avshabanov\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-core\7.2.3\cucumber-core-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-gherkin\7.2.3\cucumber-gherkin-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.3\cucumber-gherkin-messages-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-expressions\15.0.1\cucumber-expressions-15.0.1.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\datatable\7.2.3\datatable-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-plugin\7.2.3\cucumber-plugin-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\docstring\7.2.3\docstring-7.2.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\cucumber-java\7.2.3\cucumber-java-7.2.3.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-suite\1.8.2\junit-platform-suite-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.2\junit-platform-suite-api-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.2\junit-platform-suite-engine-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.2\junit-platform-suite-commons-1.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\vintage\junit-vintage-engine\5.8.2\junit-vintage-engine-5.8.2.jar;C:\Users\avshabanov\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.17.3\allure-cucumber7-jvm-2.17.3.jar;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-java-commons\2.17.3\allure-java-commons-2.17.3.jar;C:\Users\avshabanov\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\avshabanov\.m2\repository\io\qameta\allure\allure-model\2.17.3\allure-model-2.17.3.jar;C:\Users\avshabanov\.m2\repository\io\cucumber\gherkin\22.0.0\gherkin-22.0.0.jar;C:\Users\avshabanov\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2\jackson-databind-2.13.2.jar;C:\Users\avshabanov\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.2\jackson-annotations-2.13.2.jar;C:\Users\avshabanov\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar;C:\Users\avshabanov\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\avshabanov\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\avshabanov\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -36,7 +36,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\avshabanov\AppData\Local\Temp\surefire516549692794129609\surefirebooter16762613987266189369.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\avshabanov\AppData\Local\Temp\surefire14218715293585472931\surefirebooter4097731999200653452.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.14+8-LTS-263"/>
@@ -50,8 +50,8 @@
     <property name="localRepository" value="C:\Users\avshabanov\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\AVSHAB~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.3.1"/>
     <property name="java.version" value="11.0.14"/>
-    <property name="Cucumber.Options" value="--tags @smoketest"/>
     <property name="user.dir" value="C:\Users\avshabanov\repo\cucumberProject"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
@@ -65,95 +65,95 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="Create a new application without images. Verify that it is displayed correctly and can be downloaded." classname="feature to test applications functionality" time="12.435">
+  <testcase name="Create a new application without images. Verify that it is displayed correctly and can be downloaded." classname="feature to test applications functionality" time="10.405">
     <system-out><![CDATA[user clicks on login button
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 60159
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 63572
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:15:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:08:19 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:15:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:15:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>
-  <testcase name="Edit an application without images, and verify that the changes were applied." classname="feature to test applications functionality" time="8.329">
+  <testcase name="Edit an application without images, and verify that the changes were applied." classname="feature to test applications functionality" time="7.903">
     <system-out><![CDATA[user clicks on login button
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55471
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 56181
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:15:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:08:27 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:15:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:28 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:15:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:28 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>
-  <testcase name="Create a new application with an image and icon" classname="feature to test applications functionality" time="7.961">
+  <testcase name="Create a new application with an image and icon" classname="feature to test applications functionality" time="8.834">
     <system-out><![CDATA[user clicks on login button
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 61109
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 62225
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:15:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:08:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:15:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:15:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>
-  <testcase name="Delete an application and verify that it has been removed" classname="feature to test applications functionality" time="7.592">
+  <testcase name="Delete an application and verify that it has been removed" classname="feature to test applications functionality" time="8.147">
     <system-out><![CDATA[user clicks on login button
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55694
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55691
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:15:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:08:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:15:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:15:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>
-  <testcase name="confirm text on page" classname="feature to test applications functionality" time="8.903">
+  <testcase name="confirm text on page" classname="feature to test applications functionality" time="9.286">
     <system-out><![CDATA[user clicks on login button
-Details method: DetailsPage{title='Application Maps 1', description='Description: Just a sample description for this application [Application Maps 1]', category='Category: Maps', author='Author: admin', numberOfDownloads=0}
-Json method: DetailsPage{title='Application Maps 1', description='Description: Just a sample description for this application [Application Maps 1]', category='Category: Maps', author='Author: admin', numberOfDownloads=0}
+Details method: DetailsPage{title='Application Fun 0', description='Description: Just a sample description for this application [Application Fun 0]', category='Category: Fun', author='Author: admin', numberOfDownloads=0}
+Json method: DetailsPage{title='Application Fun 0', description='Description: Just a sample description for this application [Application Fun 0]', category='Category: Fun', author='Author: admin', numberOfDownloads=0}
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 51222
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 57889
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:15:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:08:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:15:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:53 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:15:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:08:53 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>
-  <testcase name="Create an application, and download it many times" classname="feature to test applications functionality" time="8.643">
+  <testcase name="Create an application, and download it many times" classname="feature to test applications functionality" time="9.145">
     <system-out><![CDATA[user clicks on login button
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 58329
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 64064
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар. 24, 2022 6:16:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар. 25, 2022 11:09:02 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 24, 2022 6:16:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:09:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-мар. 24, 2022 6:16:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 25, 2022 11:09:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
   </testcase>

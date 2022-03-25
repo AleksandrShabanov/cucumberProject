@@ -1,4 +1,3 @@
-org\cucumber\framework\DataProvider.class
 org\cucumber\pages\HomePage.class
 org\cucumber\pages\HeaderPage.class
 org\cucumber\jsonResponse\RoleModel.class

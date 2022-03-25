@@ -3,23 +3,21 @@ package org.cucumber.stepDefinitions;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.assertj.core.api.SoftAssertions;
-import org.cucumber.models.User;
 import org.cucumber.pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class AppStep {
 
-    WebDriver driver;
-    User user = new User();
-    LoginPage loginPage;
-    HeaderPage headerPage;
-    BasicPage basicPage;
-    HomePage homePage;
-    RegistrationPage registrationPage;
-    MyAppPage myAppPage;
-    NewAppPage newAppPage;
-    DetailsPage detailsPage;
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private HeaderPage headerPage;
+    private BasicPage basicPage;
+    private HomePage homePage;
+    private RegistrationPage registrationPage;
+    private MyAppPage myAppPage;
+    private NewAppPage newAppPage;
+    private DetailsPage detailsPage;
 
     @Before
     public void setUp() {
@@ -89,13 +87,9 @@ public class AppStep {
         Assert.assertEquals(basicPage.getFlashMessage(), string);
     }
 
-    @When("press choose file for add image")
-    public void pressChooseFileForAddImage() {
-        newAppPage.addImage();
-    }
-
-    @And("press choose file for add icon")
-    public void pressChooseFileForAddIcon() {
+    @When("press choose file for add {string}")
+    public void pressChooseFileForAdd(String name) {
+        newAppPage.add(name);
     }
 
     @Then("verify that app was create")

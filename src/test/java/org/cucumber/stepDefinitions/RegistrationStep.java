@@ -2,25 +2,22 @@ package org.cucumber.stepDefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.cucumber.models.User;
 import org.cucumber.pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import io.cucumber.datatable.DataTable;
 
 import java.util.Map;
 
 public class RegistrationStep {
 
-    WebDriver driver;
-    User user = new User();
-    LoginPage loginPage;
-    HeaderPage headerPage;
-    BasicPage basicPage;
-    HomePage homePage;
-    RegistrationPage registrationPage;
-    MyAppPage myAppPage;
-    NewAppPage newAppPage;
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private HeaderPage headerPage;
+    private BasicPage basicPage;
+    private HomePage homePage;
+    private RegistrationPage registrationPage;
+    private MyAppPage myAppPage;
+    private NewAppPage newAppPage;
 
     @Before
     public void setUp() {
@@ -32,12 +29,6 @@ public class RegistrationStep {
         registrationPage = new RegistrationPage(driver);
         myAppPage = new MyAppPage(driver);
         newAppPage = new NewAppPage(driver);
-    }
-
-    @Given("^we create user$")
-    public void createUser(DataTable dataTable) {
-        user.createUser(dataTable, user);
-        System.out.println(user);
     }
 
     @Given("user is on login page clicks on {string} link")
@@ -90,8 +81,4 @@ public class RegistrationStep {
         Assert.assertFalse(basicPage.isElementDisplayed(headerPage.getMyAppLink()));
         System.out.println("verify that the user can see the app but cannot upload them");
     }
-
-
-
-
 }

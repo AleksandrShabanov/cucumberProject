@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MyAppPage extends BasicPage {
     private WebElement addNewApp;
-
-    WebDriver driver;
+    private WebDriver driver;
 
     public MyAppPage (WebDriver driver) {
         super(driver);
@@ -25,5 +24,4 @@ public class MyAppPage extends BasicPage {
         Log4j2Manager.info("===============" + "newAppPage method: End" + "===============");
         return new NewAppPage(driver);
     }
-
 }

@@ -15,15 +15,13 @@ public class BasicPage {
 
     private By logoutBy;
     private final static By flash = By.cssSelector("p.flash");
-
     private WebDriver driver;
-    Settings settings = new Settings();
+    private Settings settings = new Settings();
 
     public BasicPage (WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
         public LoginPage forceLogout(WebDriver driver, String link) {
         logoutBy = By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link));

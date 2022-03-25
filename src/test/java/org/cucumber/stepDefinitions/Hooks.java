@@ -2,9 +2,7 @@ package org.cucumber.stepDefinitions;
 
 import io.cucumber.java.*;
 import org.cucumber.framework.Settings;
-
 import org.openqa.selenium.WebDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {

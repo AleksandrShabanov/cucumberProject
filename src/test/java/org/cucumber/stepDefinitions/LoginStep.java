@@ -10,11 +10,11 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class LoginStep {
-    WebDriver driver;
-    LoginPage loginPage;
-    HeaderPage headerPage;
-    BasicPage basicPage;
-    HomePage homePage;
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private HeaderPage headerPage;
+    private BasicPage basicPage;
+    private HomePage homePage;
 
     @Before
     public void setUp() {

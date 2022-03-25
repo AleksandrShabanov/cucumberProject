@@ -1,6 +1,5 @@
 package org.cucumber.pages;
 
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.cucumber.framework.LocatorsEnum;
@@ -12,20 +11,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.Objects;
 
 public class DetailsPage extends BasicPage {
 
-//    @FindBy(linkText = DOWNLOAD_LINK)
     private WebElement downloadLink;
-//    @FindBy(linkText = EDIT_LINK)
     private WebElement editLink;
     @FindBy(xpath = TEXT_AREA_XPATH)
     private WebElement textAreaDescription;
     @FindBy(xpath = UPDATE_BUTTON_XPATH)
     private WebElement updateButton;
-//    @FindBy(linkText = DELETE_LINK)
     private WebElement deleteLink;
     private Alert alertConfirmDelete;
 
@@ -41,15 +36,13 @@ public class DetailsPage extends BasicPage {
     private WebElement titleText;
     @FindBy(xpath = "/html/body/pre")
     WebElement jsonResponse;
-    ObjectMapper objectMapper = new ObjectMapper();
 
     private String titleOfApp;
     private String descriptionOfApp;
     private String categoryOfApp;
     private String authorOfApp;
     private int numberOfDownloadsOfApp;
-
-    WebDriver driver;
+    private WebDriver driver;
 
     public DetailsPage(WebDriver driver) {
         super(driver);
@@ -60,15 +53,10 @@ public class DetailsPage extends BasicPage {
     public WebElement getJsonResponse() {
         return jsonResponse;
     }
-
     public String getTitleOfApp() { return titleOfApp; }
-
     public String getDescriptionOfApp() { return descriptionOfApp; }
-
     public String getCategoryOfApp() { return categoryOfApp; }
-
     public String getAuthorOfApp() { return authorOfApp; }
-
     public int getNumberOfDownloadsOfApp() { return numberOfDownloadsOfApp; }
 
     public DetailsPage getJson() {
@@ -117,7 +105,7 @@ public class DetailsPage extends BasicPage {
         Log4j2Manager.info("===============" + "downloadFile method: Start" + "===============");
         return new DetailsPage(driver);
     }
-//
+
     public void deleteFile(String link) {
         Log4j2Manager.info("===============" + "deleteFile method: Start" + "===============");
         deleteLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
@@ -160,9 +148,6 @@ public class DetailsPage extends BasicPage {
         return Objects.hash(titleOfApp, descriptionOfApp, categoryOfApp, authorOfApp, numberOfDownloadsOfApp);
     }
 
-//    private static final String DOWNLOAD_LINK = "Download";
-//    private static final String DELETE_LINK = "Delete";
-//    private static final String EDIT_LINK = "Edit";
     private static final String TEXT_AREA_XPATH = "//textarea[@name='description']";
     private static final String UPDATE_BUTTON_XPATH = "//input[@type='submit']";
 
