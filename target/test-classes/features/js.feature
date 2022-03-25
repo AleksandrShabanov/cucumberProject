@@ -1,3 +1,4 @@
+@regression
 Feature: feature to test js functionality
 
   Scenario: Get the coordinates of the jumping div (with a red border and the text ‘Find me !’ inside).

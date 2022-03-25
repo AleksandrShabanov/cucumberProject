@@ -1,3 +1,4 @@
+@smoketest
 Feature: feature to test login functionality
 
   Scenario: Login as a valid user

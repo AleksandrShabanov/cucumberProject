@@ -1,4 +1,5 @@
-Feature: feature to test registration user functionality
+@smoketest
+Feature:feature to test registration user functionality
 
   Scenario: Register a new user, logout, and verify that the user can login
     Given user is on login page clicks on 'Register as a new user' link

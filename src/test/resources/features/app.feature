@@ -1,4 +1,4 @@
-@smoketest
+@regression
 Feature:feature to test applications functionality
 
   Scenario:Create a new application without images. Verify that it is displayed correctly and can be downloaded.

@@ -1,3 +1,4 @@
+@regression
 Feature: feature to test ajax functionality
 
   Scenario: Enter two valid numbers, click ‘Sum’, wait for the result and check if the result is correct
