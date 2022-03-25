@@ -1,7 +1,7 @@
 package org.cucumber.pages;
 
 import org.cucumber.framework.LocatorsEnum;
-import org.cucumber.framework.Log4j2Manager;
+import org.cucumber.framework.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,24 +35,19 @@ public class HomePage extends BasicPage {
     }
 
     public WebElement isMyAppPopular() {
-        Log4j2Manager.info("===============" + "isMyAppPopular method: Start" + "===============");
+        Utils.waitForElementVisible(myAppPopular);
         myAppPopular.click();
-        Log4j2Manager.info("===============" + "isMyAppPopular method: End" + "===============");
         return myAppPopular;
     }
 
     public DetailsPage getDetailsPage(String link) {
-        Log4j2Manager.info("===============" + "getDetailsPage method: Start" + "===============");
         detailsLink = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_LINK.getText(), link)));
         detailsLink.click();
-        Log4j2Manager.info("===============" + "getDetailsPage method: End" + "===============");
         return new DetailsPage(driver);
     }
 
     public DetailsPage getNewAppDetailsPage() {
-        Log4j2Manager.info("===============" + "getNewAppDetailsPage method: Start" + "===============");
         newAppDetailsLink.click();
-        Log4j2Manager.info("===============" + "getNewAppDetailsPage method: End" + "===============");
         return new DetailsPage(driver);
     }
 

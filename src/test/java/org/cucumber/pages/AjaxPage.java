@@ -1,6 +1,5 @@
 package org.cucumber.pages;
 
-import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.framework.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,7 +57,6 @@ public class AjaxPage extends BasicPage {
                 System.out.println("the sum of the numbers is not correct");
             }
         }
-        Log4j2Manager.info("===============" + "sumTwoNumbers method: End" + "===============");
         return false;
     }
 

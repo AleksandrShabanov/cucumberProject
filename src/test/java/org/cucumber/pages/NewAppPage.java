@@ -1,7 +1,6 @@
 package org.cucumber.pages;
 
 import org.cucumber.framework.LocatorsEnum;
-import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,10 +33,8 @@ public class NewAppPage extends BasicPage {
     }
 
     public void createNewApp(String name, String descr) {
-        Log4j2Manager.info("===============" + "createNewApp method: Start" + "===============");
         titleTextField.sendKeys(name);
         textAreaDescription.sendKeys(descr);
-        Log4j2Manager.info("===============" + "createNewApp method: End" + "===============");
     }
 
     public HomePage clickCreateButton(String button) {

@@ -6,11 +6,9 @@ org\cucumber\jsonResponse\Root.class
 org\cucumber\stepDefinitions\RegistrationStep.class
 org\cucumber\framework\BrowserType.class
 org\cucumber\stepDefinitions\LoginStep.class
-org\cucumber\models\User.class
 org\cucumber\framework\Settings$1.class
 org\cucumber\stepDefinitions\SmokeTest.class
 org\cucumber\stepDefinitions\AppStep.class
-org\cucumber\models\UserBuilder.class
 org\cucumber\pages\BasicPage.class
 org\cucumber\pages\AjaxPage.class
 org\cucumber\pages\MyAppPage.class
@@ -24,7 +22,6 @@ org\cucumber\framework\Settings.class
 org\cucumber\pages\JsPage.class
 org\cucumber\jsonResponse\Category.class
 org\cucumber\stepDefinitions\Hooks.class
-org\cucumber\framework\Log4j2Manager.class
 org\cucumber\framework\UnknownBrowserException.class
 org\cucumber\framework\UnknownPropertyException.class
 org\cucumber\pages\NewAppPage.class

@@ -6,7 +6,6 @@ C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\Regist
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\Hooks.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\JsStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\JsPage.java
-C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\Log4j2Manager.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\Settings.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\MyAppPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\framework\LocatorsEnum.java
@@ -18,12 +17,10 @@ C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\NewAppPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse\Category.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse\RoleModel.java
-C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\models\User.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\LoginStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\HomePage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\BasicPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\jsonResponse\Root.java
-C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\models\UserBuilder.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\stepDefinitions\AppStep.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\LoginPage.java
 C:\Users\avshabanov\repo\cucumberProject\src\test\java\org\cucumber\pages\AjaxPage.java

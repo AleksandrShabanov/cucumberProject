@@ -32,19 +32,16 @@ public class LoginStep {
 
     @When("user clicks on {string} button")
     public void clicksOnLoginButton(String button) {
-        System.out.println("user clicks on login button");
         loginPage.clickLoginButton(button);
     }
 
     @Then("^check valid login using fName '(.*)' and lName '(.*)'$")
     public void userIsNavigatedToTheHomePage(String fName, String lName) {
         Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName)));
-        System.out.println("user is navigated to the Home page");
     }
 
     @Then("^check invalid login using string '(.*)'$")
     public void checkInvalidLogin(String string) {
         Assert.assertTrue(basicPage.getFlashMessage().equals(string));
-        System.out.println("You have entered an invalid username or password!");
     }
 }

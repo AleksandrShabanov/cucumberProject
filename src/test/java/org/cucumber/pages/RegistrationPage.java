@@ -1,7 +1,6 @@
 package org.cucumber.pages;
 
 import org.cucumber.framework.LocatorsEnum;
-import org.cucumber.framework.Log4j2Manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,10 +34,8 @@ public class RegistrationPage extends BasicPage {
     }
 
     public HomePage clickOnRegister(String button) {
-        Log4j2Manager.info("===============" + "clickOnRegister method: Start" + "===============");
         registerButton = driver.findElement(By.xpath(String.format(LocatorsEnum.BASE_BUTTON.getText(), button)));
         registerButton.click();
-        Log4j2Manager.info("===============" + "clickOnRegister method: End" + "===============");
         return new HomePage(driver);
     }
 }

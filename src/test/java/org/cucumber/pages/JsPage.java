@@ -1,6 +1,5 @@
 package org.cucumber.pages;
 
-import org.cucumber.framework.Log4j2Manager;
 import org.cucumber.framework.Settings;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,17 +25,14 @@ public class JsPage extends BasicPage {
     }
 
     public void enterCoordinates(JavascriptExecutor js) {
-        Log4j2Manager.info("===============" + "enterCoordinates method: Start" + "===============");
         String sTop = (String)js.executeScript("return $(\"div.flash\").css(\"top\" );");
         String sLeft = (String) js.executeScript("return $(\"div.flash\").css(\"left\" );");
 
         top.sendKeys(Long.toString(Math.round(Double.parseDouble(sTop.replace("px", "")))));
         left.sendKeys(Long.toString(Math.round(Double.parseDouble(sLeft.replace("px", "")))));
-        Log4j2Manager.info("===============" + "enterCoordinates method: End" + "===============");
     }
 
     public void isAlertDisplayed(JavascriptExecutor js, String alert) {
-        Log4j2Manager.info("===============" + "isAlertDisplayed method: Start" + "===============");
         js.executeScript("process();");
         try {
             WebDriverWait wait = new WebDriverWait(settings.getDriver(), 2);
@@ -49,7 +45,6 @@ public class JsPage extends BasicPage {
         } catch (Exception e) {
 
         }
-        Log4j2Manager.info("===============" + "isAlertDisplayed method: End" + "===============");
     }
 
     private static final String TOP_TEXT_FIELD_ID = "top";

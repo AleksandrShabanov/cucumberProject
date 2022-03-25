@@ -34,12 +34,10 @@ public class RegistrationStep {
     @Given("user is on login page clicks on {string} link")
     public void userClicksOnRegisterLink(String registerLink) {
         loginPage.getRegistrationPage(registerLink);
-        System.out.println("user clicks on register link");
     }
 
     @And("^user enters his data to ([^\"]*) and type([^\"]*)$")
     public void theUserEntersHisDataToTextFieldAndTypeText(String textFiled, String text, Map<String, String> map) {
-        Map<String, String> dataMap = map;
         for (Map.Entry<String, String> entry : map.entrySet()) {
             registrationPage.enterTextData(entry.getKey(), entry.getValue());
         }
@@ -58,27 +56,23 @@ public class RegistrationStep {
 
     @Then("verify that the user with name {string} and last name {string} is logged in")
     public void verifyThatTheUserIsLoggedIn(String fName, String lName) {
-        Assert.assertTrue(headerPage.getWelcomeMessage().equals(headerPage.getWelcomeUserName(fName, lName)));
-        System.out.println("user is navigated to the Home page");
+        Assert.assertEquals(headerPage.getWelcomeMessage(), headerPage.getWelcomeUserName(fName, lName));
     }
 
     @When("user {string}")
     public void userLogout(String logout) {
         basicPage.forceLogout(driver, logout);
-        System.out.println("user logout");
     }
 
     @Then("click on {string} and {string} and verify upload {string}")
     public void verifyThatTheDeveloperCanOpenThePageToUploadAnApp(String myAppLink, String newAppLink, String string) throws InterruptedException {
         headerPage.getMyAppPage(myAppLink);
         myAppPage.getNewAppPage(newAppLink);
-        Assert.assertTrue(newAppPage.getTitleName().getText().equals(string));
-        System.out.println("verify that the developer can open the page to upload");
+        Assert.assertEquals(newAppPage.getTitleName().getText(), string);
     }
 
     @Then("verify that the user can see the app but cannot upload them")
     public void verifyThatTheUserCanSeeTheAppButCannotUploadThem() {
         Assert.assertFalse(basicPage.isElementDisplayed(headerPage.getMyAppLink()));
-        System.out.println("verify that the user can see the app but cannot upload them");
     }
 }
