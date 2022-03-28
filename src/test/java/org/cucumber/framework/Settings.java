@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -36,7 +35,6 @@ public class Settings {
         getUrl = Boolean.parseBoolean(getPropertyOrThrowException(SELENIUM_BASIC_AUTH));
         browser = BrowserType.Browser(getPropertyOrThrowException(SELENIUM_BROWSER_GC));
     }
-
 
     public String getUrl() {
         if (getUrl == true) {

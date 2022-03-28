@@ -5,7 +5,6 @@ import io.cucumber.java.en.*;
 import org.cucumber.pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-
 import java.util.Map;
 
 public class RegistrationStep {
