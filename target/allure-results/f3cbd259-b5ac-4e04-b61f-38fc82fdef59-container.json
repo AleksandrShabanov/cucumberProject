@@ -1,0 +1,1 @@
+{"uuid":"f3cbd259-b5ac-4e04-b61f-38fc82fdef59","name":"Register as a regular user, verify that the regular user can see the applications but cannot upload them.","children":["f137960a-e16b-4238-bd5e-6657ac65cdd2"],"befores":[],"afters":[],"start":1648724797329,"stop":1648724807593}
