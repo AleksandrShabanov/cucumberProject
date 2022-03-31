@@ -1,9 +1,5 @@
 package org.cucumber.framework;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -95,29 +91,5 @@ public class Settings {
         }
     }
 
-    public WebDriver getDriver() {
-        return getDriver(browser);
-    }
 
-    private WebDriver getDriver(BrowserType browserType) {
-        switch (browserType) {
-            case GC:
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-                return new ChromeDriver();
-            case FIREFOX:
-                System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
-                return new FirefoxDriver();
-            case EDGE:
-                System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
-                return new EdgeDriver();
-            default:
-                throw new UnknownBrowserException("Cannot create driver for unknown browser type");
-        }
-    }
-
-    public String getAdditionalUrl() { return additionalUrl; }
-
-    public BrowserType getBrowser() {
-        return browser;
-    }
 }

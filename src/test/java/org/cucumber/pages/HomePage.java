@@ -35,7 +35,7 @@ public class HomePage extends BasicPage {
     }
 
     public WebElement isMyAppPopular() {
-        Utils.waitForElementVisible(myAppPopular);
+        Utils.waitForElementVisible(driver, myAppPopular);
         myAppPopular.click();
         return myAppPopular;
     }

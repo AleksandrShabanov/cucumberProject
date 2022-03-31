@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.cucumber.stepDefinitions.RegressionTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 85.025 s - in org.cucumber.stepDefinitions.RegressionTest

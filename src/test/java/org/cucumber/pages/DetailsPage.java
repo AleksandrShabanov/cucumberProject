@@ -46,7 +46,6 @@ public class DetailsPage extends BasicPage {
     public DetailsPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
-        PageFactory.initElements(driver, this);
     }
 
     public WebElement getJsonResponse() {

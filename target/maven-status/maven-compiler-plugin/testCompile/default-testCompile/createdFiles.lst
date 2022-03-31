@@ -6,8 +6,8 @@ org\cucumber\jsonResponse\Root.class
 org\cucumber\stepDefinitions\RegistrationStep.class
 org\cucumber\framework\BrowserType.class
 org\cucumber\stepDefinitions\LoginStep.class
-org\cucumber\framework\Settings$1.class
 org\cucumber\stepDefinitions\SmokeTest.class
+org\cucumber\stepDefinitions\RegressionTest.class
 org\cucumber\stepDefinitions\AppStep.class
 org\cucumber\pages\BasicPage.class
 org\cucumber\pages\AjaxPage.class

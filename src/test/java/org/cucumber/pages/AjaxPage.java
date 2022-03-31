@@ -4,6 +4,7 @@ import org.cucumber.framework.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,13 +20,15 @@ public class AjaxPage extends BasicPage {
     private WebElement correctResultField;
     @FindBy(xpath = INCORRECT_RESULT_XPATH)
     private WebElement incorrectResultField;
+    WebDriver driver;
 
     public AjaxPage(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
     public String getIncorrectResultField() {
-        Utils.waitForElementVisible(incorrectResultField);
+        Utils.waitForElementVisible(driver, incorrectResultField);
         return incorrectResultField.getText();
     }
 
@@ -34,12 +37,12 @@ public class AjaxPage extends BasicPage {
         yTextField.sendKeys(y);
     }
 
-    public void clickSum(){
+    public void clickSum() {
         sumButton.click();
     }
 
     public boolean isSumCorrect(String x, String y) {
-        Utils.waitForElementVisible(correctResultField);
+        Utils.waitForElementVisible(driver, correctResultField);
         String string = correctResultField.getText();
         String regexString = "\\d+(\\.\\d+)?";
         Double sumDouble = 0.0;

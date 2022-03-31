@@ -6,6 +6,9 @@ import org.cucumber.framework.Settings;
 import org.cucumber.pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class AjaxStep {
 
@@ -45,7 +48,7 @@ public class AjaxStep {
         Assert.assertTrue(ajaxPage.isSumCorrect(x, y));
     }
 
-    @Then("check if the result is incorrect. Incorrect result field equals {string}")
+    @Then("check if incorrect result field equals {string}")
     public void checkIfResultIsIncorrect(String incorrectFiled) {
         Assert.assertEquals(ajaxPage.getIncorrectResultField(), incorrectFiled);
     }

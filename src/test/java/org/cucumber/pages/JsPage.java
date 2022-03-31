@@ -35,9 +35,9 @@ public class JsPage extends BasicPage {
     public void isAlertDisplayed(JavascriptExecutor js, String alert) {
         js.executeScript("process();");
         try {
-            WebDriverWait wait = new WebDriverWait(settings.getDriver(), 2);
+            WebDriverWait wait = new WebDriverWait(driver, 2);
             wait.until(ExpectedConditions.alertIsPresent());
-            message = settings.getDriver().switchTo().alert();
+            message = driver.switchTo().alert();
             if (message.getText().equals(alert)) {
                 message.accept();
                 System.out.println(message.getText());

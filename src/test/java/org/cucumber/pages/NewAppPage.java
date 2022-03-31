@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.io.File;
 
 public class NewAppPage extends BasicPage {
@@ -51,5 +50,4 @@ public class NewAppPage extends BasicPage {
     private static final String TITLE_NAME_TAG_NAME = "h1";
     private static final String TITLE_TEXT_FIELD_XPATH = "//input[@name='title']";
     private static final String TEXT_AREA_XPATH = "//textarea[@name='description']";
-
 }
